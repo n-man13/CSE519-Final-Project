@@ -53,9 +53,12 @@ class TwentyQuestionsGame:
         won = False
 
         for question_number in range(1, self.max_questions + 1):
-            prompt = self._question_prompt(secret_word, history, question_number)
+            guess_only = question_number > self.max_questions - 2
+            prompt = self._question_prompt(
+                history, question_number, self.max_questions, guess_only
+            )
             raw_response = questioner.complete(prompt).strip()
-            question, guess = self._parse_questioner_response(raw_response)
+            question, guess = self._parse_questioner_response(raw_response, guess_only)
             if guess is not None and guess.casefold() == secret_word.casefold():
                 turns.append(
                     Turn(question_number, question, "correct guess", guess, raw_response)
@@ -83,20 +86,33 @@ class TwentyQuestionsGame:
         )
 
     @staticmethod
-    def _question_prompt(secret_word: str, history: list[str], number: int) -> str:
-        del secret_word  # The prompt intentionally does not reveal the answer.
+    def _question_prompt(
+        history: list[str], number: int, max_questions: int, guess_only: bool
+    ) -> str:
         prior_turns = "\n".join(history) or "(none)"
+        if guess_only:
+            return (
+                "You are the questioner in 20 Questions. This is a final guess "
+                f"(turn {number}/{max_questions}). Based on the previous turns, "
+                "return only the single answer you think is the secret word. Do "
+                "not ask a question and do not include an explanation. Use the "
+                "format 'GUESS: <answer>'.\nPrevious turns:\n" + prior_turns
+            )
         return (
             "You are the questioner in 20 Questions. Ask one answerable yes/no "
-            f"question (question {number}/20). Previous turns:\n{prior_turns}\n"
-            "Return only the question."
+            f"question (question {number}/{max_questions}). Previous turns:\n"
+            f"{prior_turns}\n"
+            "Return either 'QUESTION: <yes/no question>' or "
+            "'GUESS: <single answer>'."
         )
 
     @staticmethod
     def _answer_prompt(secret_word: str, question: str) -> str:
         return (
             f"The secret word is {secret_word!r}. Answer this question with only "
-            f"'yes' or 'no': {question}"
+            f"'yes' or 'no': {question}\n"
+            "If the question asks whether the secret word is a specific answer, "
+            "reply 'yes' only when that answer exactly matches the secret word."
         )
 
     @staticmethod
@@ -105,12 +121,28 @@ class TwentyQuestionsGame:
         return normalized if normalized in {"yes", "no"} else None
 
     @staticmethod
-    def _parse_questioner_response(response: str) -> tuple[str, str | None]:
+    def _parse_questioner_response(
+        response: str, guess_only: bool = False
+    ) -> tuple[str, str | None]:
         if not response:
             raise ValueError("Questioner returned an empty response.")
-        if response.lower().startswith("guess:"):
+        normalized = response.casefold()
+        if guess_only:
+            if normalized.startswith("guess:"):
+                guess = response.split(":", 1)[1].strip()
+            else:
+                guess = response
+            if not guess:
+                raise ValueError("Questioner returned an empty guess.")
+            return response, guess
+        if normalized.startswith("guess:"):
             guess = response.split(":", 1)[1].strip()
             if not guess:
                 raise ValueError("Questioner returned an empty guess.")
             return response, guess
+        if normalized.startswith("question:"):
+            question = response.split(":", 1)[1].strip()
+            if not question:
+                raise ValueError("Questioner returned an empty question.")
+            return question, None
         return response, None

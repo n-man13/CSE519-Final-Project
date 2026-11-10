@@ -18,7 +18,7 @@ class FakeModel:
 
 
 def test_game_records_turns_and_accepts_correct_guess():
-    questioner = FakeModel(["Is it alive?", "Guess: penguin"])
+    questioner = FakeModel(["QUESTION: Is it alive?", "GUESS: penguin"])
     answerer = FakeModel(["Yes."])
 
     result = TwentyQuestionsGame(max_questions=20).play(
@@ -31,8 +31,32 @@ def test_game_records_turns_and_accepts_correct_guess():
     assert result.turns[1].guess == "penguin"
 
 
+def test_game_accepts_explicit_guess_without_asking_answerer():
+    questioner = FakeModel(["GUESS: piano"])
+    answerer = FakeModel([])
+
+    result = TwentyQuestionsGame(max_questions=1).play(
+        "piano", questioner, answerer
+    )
+
+    assert result.won is True
+    assert result.turns[0].answer == "correct guess"
+
+
+def test_final_two_turns_are_guess_only():
+    questioner = FakeModel(["penguin", "GUESS: penguin"])
+    answerer = FakeModel([])
+
+    result = TwentyQuestionsGame(max_questions=2).play(
+        "penguin", questioner, answerer
+    )
+
+    assert result.won is True
+    assert result.questions_used == 1
+
+
 def test_game_normalizes_answer_punctuation():
-    questioner = FakeModel(["Is it round?"])
+    questioner = FakeModel(["QUESTION: Is it round?"])
     answerer = FakeModel([" no! "])
 
     result = TwentyQuestionsGame(max_questions=1).play(
@@ -43,7 +67,7 @@ def test_game_normalizes_answer_punctuation():
 
 
 def test_game_rejects_non_binary_answer():
-    questioner = FakeModel(["Is it round?"])
+    questioner = FakeModel(["QUESTION: Is it round?"])
     answerer = FakeModel(["maybe"])
 
     with pytest.raises(ValueError, match="yes or no"):
@@ -51,7 +75,7 @@ def test_game_rejects_non_binary_answer():
 
 
 def test_game_stops_at_question_limit():
-    questioner = FakeModel(["Is it blue?", "Is it large?"])
+    questioner = FakeModel(["QUESTION: Is it blue?", "QUESTION: Is it large?"])
     answerer = FakeModel(["no"])
 
     result = TwentyQuestionsGame(max_questions=1).play(
