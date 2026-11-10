@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+import string
 from typing import Any
 
 from .models import ModelAdapter
@@ -63,10 +64,11 @@ class TwentyQuestionsGame:
                 break
 
             answer_prompt = self._answer_prompt(secret_word, question)
-            answer = answerer.complete(answer_prompt).strip()
-            if answer.casefold() not in {"yes", "no"}:
+            raw_answer = answerer.complete(answer_prompt).strip()
+            answer = self._parse_answer(raw_answer)
+            if answer is None:
                 raise ValueError(
-                    f"Answerer response must be yes or no, got: {answer!r}"
+                    f"Answerer response must be yes or no, got: {raw_answer!r}"
                 )
             turns.append(Turn(question_number, question, answer, guess, raw_response))
             history.append(f"Q: {question}\nA: {answer}")
@@ -96,6 +98,11 @@ class TwentyQuestionsGame:
             f"The secret word is {secret_word!r}. Answer this question with only "
             f"'yes' or 'no': {question}"
         )
+
+    @staticmethod
+    def _parse_answer(response: str) -> str | None:
+        normalized = response.casefold().strip().strip(string.punctuation)
+        return normalized if normalized in {"yes", "no"} else None
 
     @staticmethod
     def _parse_questioner_response(response: str) -> tuple[str, str | None]:

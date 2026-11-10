@@ -19,7 +19,7 @@ class FakeModel:
 
 def test_game_records_turns_and_accepts_correct_guess():
     questioner = FakeModel(["Is it alive?", "Guess: penguin"])
-    answerer = FakeModel(["yes"])
+    answerer = FakeModel(["Yes."])
 
     result = TwentyQuestionsGame(max_questions=20).play(
         "penguin", questioner, answerer
@@ -29,6 +29,17 @@ def test_game_records_turns_and_accepts_correct_guess():
     assert result.questions_used == 2
     assert result.turns[0].answer == "yes"
     assert result.turns[1].guess == "penguin"
+
+
+def test_game_normalizes_answer_punctuation():
+    questioner = FakeModel(["Is it round?"])
+    answerer = FakeModel([" no! "])
+
+    result = TwentyQuestionsGame(max_questions=1).play(
+        "piano", questioner, answerer
+    )
+
+    assert result.turns[0].answer == "no"
 
 
 def test_game_rejects_non_binary_answer():
