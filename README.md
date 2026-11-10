@@ -77,6 +77,31 @@ If time and resources permit, we will also evaluate computational efficiency usi
 
 # Next Steps
 
+## Code startup
+
+The initial implementation uses Python and a local model served through Ollama.
+The first milestone is a single reproducible game using a curated hidden-word
+list. The game engine records every turn as structured JSON before the project
+scales to repeated trials and comparisons across models.
+
+Install the project in editable mode and run the tests:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -e ".[test]"
+.venv/bin/python -m pytest
+```
+
+After installing Ollama and pulling a local model, run one game:
+
+```bash
+ollama pull llama3.2
+.venv/bin/python -m twenty_questions.cli --model llama3.2 --secret-word penguin
+```
+
+The transcript is saved to `results/game.json`. Keep these transcripts so that
+later evaluation is reproducible and auditable.
+
 # References
 
 Kumar, C. R. S. (n.d.). *Large language models (LLM) for automating 20 questions game*.
