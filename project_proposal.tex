@@ -137,39 +137,39 @@ For many of the models we looked at, we were searching for four main things:
 \toprule
 \textbf{Model} & \textbf{Characteristics} & \textbf{Expected relevance} \\
 \midrule
-\textbf{DeepSeek R1 0528} &
+\textbf{\hyperlink{ref-deepseek}{DeepSeek R1 0528}} &
 Strong reasoning and inference; performs well on several benchmarks,
 including GPQA Diamond and major sciences. &
 May excel at games requiring scientific facts and deduction. \\
-\textbf{Kimi K2} &
+\textbf{\hyperlink{ref-kimi}{Kimi K2}} &
 Originally intended for coding; also supports conversation and step-by-step
 logical reasoning. &
 Its thinking style may be interesting to evaluate in 20 Questions. \\
-\textbf{Xwin-LM} &
+\textbf{\hyperlink{ref-xwin}{Xwin-LM}} &
 Based on Llama 2 and optimized for human-like conversation; exceeded GPT-4
 in the AlpacaEval instruction-following benchmark. &
 May generate more natural questions. \\
-\textbf{Command-R} &
+\textbf{\hyperlink{ref-command-r}{Command-R}} &
 Optimized for long-context conversation and grounded generation from supplied
 texts or documents. &
 May be a strong guesser when interpreting many small questions. \\
-\textbf{Cipher} &
+\textbf{\hyperlink{ref-cipher}{Cipher}} &
 Designed for consistent, human-like conversations; gives direct, precise,
 well-structured answers and uses low memory. &
 May stay focused on the topic and narrow the game effectively. \\
-\textbf{Spark-X2.5-4B} &
+\textbf{\hyperlink{ref-spark}{Spark-X2.5-4B}} &
 General-purpose model specialized in writing, reasoning, and conversation;
 has lower overhead than models with larger contexts. &
 Its reasoning specialization may help it perform well in 20 Questions. \\
-\textbf{Thoxhuman-chat-8b} &
+\textbf{\hyperlink{ref-thox}{Thoxhuman-chat-8b}} &
 Digital-human conversation model with adaptable personas, natural dialogue,
 and verified factual responses; based on Qwen3. &
 May guess quickly and pose natural questions. \\
-\textbf{Apollo-Astralis-4B} &
+\textbf{\hyperlink{ref-apollo}{Apollo-Astralis-4B}} &
 Built for deep logical thinking and human--AI collaboration; conversational,
 empathetic, and runs with as little as 4 GB RAM and 2.5 GB disk space. &
 May perform well through logical thinking while testing lightweight models. \\
-\textbf{Billy} &
+\textbf{\hyperlink{ref-billy}{Billy}} &
 ``Better Interaction Language Learning Yield'' model customized for casual,
 human-like conversation; relatively lightweight at 4.1 GB. &
 May pose questions more naturally. \\
@@ -254,33 +254,33 @@ Our code is located at
 \section{References}
 
 \begin{enumerate}[leftmargin=*]
-    \item Billy. (n.d.). \textit{Billy}. Ollama; Billy. Retrieved November 11,
+    \hypertarget{ref-billy}{}\item Billy. (n.d.). \textit{Billy}. Ollama; Billy. Retrieved November 11,
     2026, from \url{https://ollama.com/billy/billy}
     \item CLiPS. (n.d.). \textit{20Q}. Hugging Face. Retrieved November 12,
     2026, from \url{https://huggingface.co/datasets/clips/20Q}
-    \item CohereLabs. (n.d.). \textit{C4AI Command R v01}. Hugging Face;
+    \hypertarget{ref-command-r}{}\item CohereLabs. (n.d.). \textit{C4AI Command R v01}. Hugging Face;
     CohereLabs. Retrieved November 10, 2026, from
     \url{https://huggingface.co/CohereLabs/c4ai-command-r-v01}
-    \item DeepSeek-AI. (2025, May 29). \textit{DeepSeek-R1-0528}. Hugging
+    \hypertarget{ref-deepseek}{}\item DeepSeek-AI. (2025, May 29). \textit{DeepSeek-R1-0528}. Hugging
     Face. \url{https://huggingface.co/deepseek-ai/DeepSeek-R1-0528}
     \item KUMAR, CRS. ``Large Language Models (LLM) for Automating 20
     Questions Game.''
-    \item MoonshotAI. (2026, July 27). \textit{Kimi-K2.6}. Hugging Face.
+    \hypertarget{ref-kimi}{}\item MoonshotAI. (2026, July 27). \textit{Kimi-K2.6}. Hugging Face.
     \url{https://huggingface.co/moonshotai/Kimi-K2.6}
-    \item Ollama. (2025, March 5). \textit{Cipher}. Ollama.
+    \hypertarget{ref-cipher}{}\item Ollama. (2025, March 5). \textit{Cipher}. Ollama.
     \url{https://ollama.com/vatistasdim/Cipher}
-    \item SparkLLM. (n.d.). \textit{Spark-X2.5-4B}. Ollama; SparkLLM.
+    \hypertarget{ref-spark}{}\item SparkLLM. (n.d.). \textit{Spark-X2.5-4B}. Ollama; SparkLLM.
     Retrieved November 10, 2026, from
     \url{https://ollama.com/SparkLLM/Spark-X2.5-4B}
-    \item Thox-AI. (n.d.). \textit{Thoxhuman-chat-8b}. Ollama; Thox-AI.
+    \hypertarget{ref-thox}{}\item Thox-AI. (n.d.). \textit{Thoxhuman-chat-8b}. Ollama; Thox-AI.
     Retrieved November 11, 2026, from
     \url{https://ollama.com/Thox-ai/thoxhuman-chat-8b}
     \item \textit{20 questions (TV series 1949-- )}. (n.d.). IMDb.
     \url{https://www.imdb.com/title/tt0320997/}
-    \item Vanta Research. (n.d.). \textit{Apollo Astralis 4B}. Ollama; Vanta
+    \hypertarget{ref-apollo}{}\item Vanta Research. (n.d.). \textit{Apollo Astralis 4B}. Ollama; Vanta
     Research. Retrieved November 11, 2026, from
     \url{https://ollama.com/vanta-research/apollo-astralis-4b}
-    \item Xwin-LM. (n.d.). \textit{Xwin-LM-7B-V0.2}. Hugging Face. Retrieved
+    \hypertarget{ref-xwin}{}\item Xwin-LM. (n.d.). \textit{Xwin-LM-7B-V0.2}. Hugging Face. Retrieved
     November 10, 2026, from
     \url{https://huggingface.co/Xwin-LM/Xwin-LM-7B-V0.2}
     \item Zhang, Yizhe, Jiarui Lu, and Navdeep Jaitly. ``Probing the
