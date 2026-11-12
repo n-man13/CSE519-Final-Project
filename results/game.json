@@ -1,0 +1,149 @@
+{
+  "secret_word": "penguin",
+  "questioner_model": "llama3.2",
+  "answerer_model": "llama3.2",
+  "won": false,
+  "questions_used": 20,
+  "turns": [
+    {
+      "question_number": 1,
+      "question": "Is the thing you're thinking of a living thing?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Is the thing you're thinking of a living thing?"
+    },
+    {
+      "question_number": 2,
+      "question": "Is the living thing you're thinking of typically found indoors?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Is the living thing you're thinking of typically found indoors?"
+    },
+    {
+      "question_number": 3,
+      "question": "Is the living thing you're thinking of typically found in or near water?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Is the living thing you're thinking of typically found in or near water?"
+    },
+    {
+      "question_number": 4,
+      "question": "Is the living thing you're thinking of a mammal?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Is the living thing you're thinking of a mammal?"
+    },
+    {
+      "question_number": 5,
+      "question": "Does the living thing you're thinking of live on land?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Does the living thing you're thinking of live on land?"
+    },
+    {
+      "question_number": 6,
+      "question": "Is the living thing you're thinking of a type of aquatic animal?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Is the living thing you're thinking of a type of aquatic animal?"
+    },
+    {
+      "question_number": 7,
+      "question": "Is the aquatic animal you're thinking of typically found in saltwater?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Is the aquatic animal you're thinking of typically found in saltwater?"
+    },
+    {
+      "question_number": 8,
+      "question": "Does the aquatic animal you're thinking of have four legs?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "Does the aquatic animal you're thinking of have four legs?"
+    },
+    {
+      "question_number": 9,
+      "question": "Does the aquatic animal you're thinking of belong to a species that is commonly kept as pets?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Does the aquatic animal you're thinking of belong to a species that is commonly kept as pets?"
+    },
+    {
+      "question_number": 10,
+      "question": "Does the aquatic animal you're thinking of have a shell?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "Does the aquatic animal you're thinking of have a shell?"
+    },
+    {
+      "question_number": 11,
+      "question": "Is the aquatic animal you're thinking of generally small in size?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "Is the aquatic animal you're thinking of generally small in size?"
+    },
+    {
+      "question_number": 12,
+      "question": "Does the aquatic animal you're thinking of primarily feed on fish or other animals?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Does the aquatic animal you're thinking of primarily feed on fish or other animals?"
+    },
+    {
+      "question_number": 13,
+      "question": "Is the aquatic animal you're thinking of venomous?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Is the aquatic animal you're thinking of venomous?"
+    },
+    {
+      "question_number": 14,
+      "question": "Does the aquatic animal you're thinking of have a distinctive appearance, such as bright colors or patterns?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Does the aquatic animal you're thinking of have a distinctive appearance, such as bright colors or patterns?"
+    },
+    {
+      "question_number": 15,
+      "question": "Does the aquatic animal you're thinking of have claws?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "Does the aquatic animal you're thinking of have claws?"
+    },
+    {
+      "question_number": 16,
+      "question": "Is the aquatic animal you're thinking of commonly found in coral reefs?",
+      "answer": "yes",
+      "guess": null,
+      "raw_response": "QUESTION: Is the aquatic animal you're thinking of commonly found in coral reefs?"
+    },
+    {
+      "question_number": 17,
+      "question": "Does the aquatic animal you're thinking of primarily feed on algae or plant matter?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Does the aquatic animal you're thinking of primarily feed on algae or plant matter?"
+    },
+    {
+      "question_number": 18,
+      "question": "Is the aquatic animal you're thinking of a type of crustacean?",
+      "answer": "no",
+      "guess": null,
+      "raw_response": "QUESTION: Is the aquatic animal you're thinking of a type of crustacean?"
+    },
+    {
+      "question_number": 19,
+      "question": "GUESS: Lobster",
+      "answer": "no",
+      "guess": "Lobster",
+      "raw_response": "GUESS: Lobster"
+    },
+    {
+      "question_number": 20,
+      "question": "GUESS: Octopus",
+      "answer": "no",
+      "guess": "Octopus",
+      "raw_response": "GUESS: Octopus"
+    }
+  ]
+}
