@@ -1,0 +1,149 @@
+Project Proposal 
+CSE-519
+
+20 Questions with LLMs
+
+Test it on various LLMs
+See how they perform
+Investigate how to improve them
+Build Akinator with the best LLM
+https://huggingface.co/lmarena-ai
+https://www.kaggle.com/competitions/llm-20-questions/overview 
+
+
+Datasets we have
+What we plan to do with datasets
+Basic Statistics on dataset
+Roadblocks
+Preliminary results
+
+How Good Are LLMs at 20 Questions?    (MS and/or PhD Students)
+
+In the game of 20 questions, one player selects a secret word or thing, which a second player must identify by asking a series of true/false questions.   The winner (guesser or questioner) is determined by failure or success after twenty questions.    LLMs are in principle capable of suggesting random-ish words, and asking/answering questions.    How good are they at 20 questions?   Getting two models to play 20 questions with each other will not be difficult: the interesting thing is to carefully evaluate what they are doing and how well they are doing it.
+
+A successful project here will convincingly evaluate different pairs of models against each other.   Perhaps this is done through an agent-type architecture, but I will want to see results of all possible pairs of at least four different LLM models, each playing the role of guesser and questioner against each other.
+Evaluation is a critical thing here.   You need to design and perform experiments which convincingly compare models in different roles, answering questions like:
+Do models perform better when the same model is used in both roles in different sessions, or is one model better than others in a particular role?
+How well do models do selecting words/concepts uniformly at random?   Compare them to a truly random generator for nouns, places, people, and general vocabulary worlds.
+How good are the questions the models ask?  In theory each question should try to half the space of remaining possibilities.
+How good are they at accurately answering questions about the hidden word?  The guesser can mislead the questioner by giving misleading answers, which is bad/cheating.
+There is previous work here.   Do a literature search on papers which have tried to evaluate models at 20 questions.   I will expect to see a research summary in your progress report.
+
+Abstract (Introduction/ General Plan)
+
+
+The game of 20 questions involves a subject (person) having an object, profession or concept in their mind while players (guessers) question the subject to narrow down and guess the object, having the limit of 20 questions to do so. Our project aims to evaluate the performance of Large Language Models (LLMs) for both the subject and the player. 
+
+Throughout the years, LLMs have gotten better at emulating human conversations and at playing games at levels comparable (or even exceeding) professions. We aim to see how well they have really gotten and which LLMs in particular perform best as such tasks. Not only will we investigate their performance at the game, but we will also judge the models on how human-like they sound when posing questions. We will also look into reasons why certain LLMs are better than others, investigating how they were trained and for which original purpose they were built.  
+
+Background (Previous Work Done in this Domain)
+
+According to C. R. S. Kumar in his paper Large Language Models(LLM) for Automating 20 Questions Game, the game used to be accomplished by “using decision trees, heuristic algorithms, or rule-based systems that map out potential objects and the corresponding questions that might lead to their identification. However, these methods often struggle with the complexity and variability inherent in human language, especially when dealing with ambiguous or less common objects.” He goes on to utilize 1 LLM as a guesser, and another LLM as the answerer. This paper then uses the data gathered from a Kaggle competition, along with other sources.
+In 2024, Kaggle hosted a competition to see who could create the best LLM for the 20 Questions game. Each team had the ability to submit bots who would play games with other bots, and the winner of the competition utilized a dual LLM approach to handle different types of questions, with a Meta Llama 3 8B Instruct as the general purpose LLM, and a DeepSeek Math model to handle complex mathematical oriented questions about the keyword. The competition featured a 2 vs 2 cooperative game, with each team consisting of a questioner and answerer. Our work will be simplifying this to a one versus one conventional implementation.
+While previous work has demonstrated that LLMs can participate in 20 Questions, there is still an opportunity to investigate how different language models compare when assigned different roles.
+An important consideration is that the questioner and answerer require different capabilities. The questioner must demonstrate strategic reasoning, effective question selection, and the ability to interpret previous responses. The answerer must demonstrate factual knowledge, consistency, and the ability to interpret questions accurately. Because of this, a model that performs well as a questioner may not perform well as an answerer. Since our project requires each model to perform both roles, the models chosen need to be well balanced for both of these, and the winning model may not be the best guesser, or the best answerer.
+
+Approach (Plan in Detail)
+
+Our approach involves finding LLMs and researching what they were originally created for. Playing 20 questions directly with each LLM (as a player/questioner) and evaluating performance based on how many questions it takes for them to guess our object, and if they guessed correctly or not. 
+
+We will develop a scoring algorithm to score each LLM on its performance. 
+
+We will also investigate which topics each LLM performs best on.
+
+We would like to evaluate the humanness of the questions the models come up with for which we will also have to develop a metric. This might be subjective, however, we will try our best to find characteristics that seem more bot-like, rather than natural.
+
+Pairwise comparison: We will put pairs of LLMs head to head (even with themselves) and see how well they do against each other and what concepts they come up with. Are the concepts repetitive?, which LLM does best when it comes to coming up with concepts more randomly?
+
+For the questions asked, we will evaluate and score them based on how good the question was at narrowing the search down.
+
+
+
+For each pair we will initially have a hypothesis as to how it will perform based on how it was trained. Then we will see if our hypothesis holds true, and what could explain their actual behaviour. 
+
+We will test multiple models and run brief experiments involving runs with a small set of topics, then we will identify which ones work best and use them for further analysis.
+
+
+
+
+
+
+
+
+
+Models and Data
+
+For many of the models we looked at, we were searching for four main things:
+
+Knowledge: How good it is with facts and scientific know-how
+Humanness: How naturally it poses questions, as opposed to sounding like a bot.
+Size: We want to investigate how well small models perform compared to larger models. Does Occom’s Razor hold? Do simpler/lightweight models do the job just as well?
+Logic and Reasoning: How well it does for logic and deduction, this would be key when it comes to narrowing down the questions to reach the answer faster.
+
+DeepSeek R1 0528: DeepSeek is a powerful model when it comes to strong reasoning and inference tasks. It performs well for several benchmarks compared to models. Most notably the GPQA Diamond benchmark, which means it is good with facts on major sciences (Physics, Biology and Chemistry). We believe that this might give it an edge when it comes to 20 Questions, specially for games that involve scientific facts to deduce the answer.  
+
+Kimi K2: Although originally meant for coding tasks, KIMI K2 is good at conversations and step by step logical reasoning. We thought it would be interesting to see how it’s thinking style does for 20 questions, even though it is optimized for programming tasks.
+
+Xwinlm: Xwin-LM is based on Llama 2 and is optimized for emulating human-like conversations. I performed well on several benchmarks, even exceeding GPT4 in the AlpacaEval benchmark, which evaluated models for instruction following.
+We think that its ability to better emulate human conversations will make it better at coming up with questions.
+Command-r: Command-R is an LLM optimized for conversations with long contexts. It was developed by Cohere Labs, to have grounded generation capabilities. Essentially meaning that it is optimized for generating responses based on supplied texts or documents. For this model we believe that it might be a good guesser as it does well for long contexts and by extension could perform well, even with several small questions.
+	
+Cipher: Cypher is a model that is optimized for human-like conversations where the context/topic remains the same. It is good at giving direct/precise answers and uses low memory. Its outputs are well structured. 
+In 20 Questions, since the topic remains the same, Cypher might perform well as it would be less likely to stray away from the topic when asking questions to narrow the game down. 
+
+Spark-X2.5-4B: General purpose language model specialized for writing, reasoning and conversations. A particular advantage of this model is that it has a lower overhead compared to models which have a larger context. We think that its specialization in reasoning will help it perform well in a game of 20 Questions.
+
+
+Thoxhuman-chat-8b: Thox is a digital human conversation model that can adapt its persona based on what is specified. It is good at emulating natural dialogue and does a decent job when it comes to answering with verified facts. It is based on the Quen3 model. Since Thox is good with facts it might be able to guess quicker, before reaching question 20. Its natural dialogue emulation may also help it with posing questions when it plays as a questioner/player.
+
+apollo-astralis-4b : Apollo-Astralis is built for deep logical thinking and is customized for Human-AI collaboration. It has strong conversational reasoning and communicates in a way that emulates human empathy. It can work with RAM as low as 4 GB and occupy just about 2.5GB of disk space. We think its specialization in logical thinking might make it good for 20 Questions. Also it would be interesting to see if lightweight models can achieve this.  
+
+billy : Billy stands for “Better Interaction Language Learning Yield” and it is customized for conversation tasks and sounding less bot like, and more like a real human in a casual conversation. It only occupies 4.1 GB of space and is relatively lightweight. We think that its customization for conversational tasks will make it better at posing questions more naturally.
+
+
+We may also use historical question sets available for 20 Questions games and see how well each model performs with those legacy questions. This would give us a good benchmark to compare each model.
+
+
+There was a Twenty Questions show that aired in 1949 on WOR-TV and NBC. Although not all episodes are available (some records were lost) we think it would be possible to use questions and topics from this show to create our own benchmark to test models against. 
+
+https://www.imdb.com/title/tt0320997/
+
+We also found the Clips 20Q Dataset from Hugging Face, which we could use to make a similar benchmark.
+
+https://huggingface.co/datasets/clips/20Q/viewer/default/train
+
+ 
+
+Evaluation Plan
+
+Our evaluation will focus on four dimensions: overall game performance, word selection, question quality, and answer accuracy. Game performance will be measured by win rate and the average number of questions needed to identify the hidden word. We will test all pairings of at least four LLMs, with each model serving as both questioner and answerer, to identify differences between roles and self-play. Word selection will be evaluated by comparing the distribution and diversity of model-selected words across categories (nouns, places, people, and general vocabulary) against a uniform random baseline. Question quality will be measured by how effectively questions reduce the remaining candidate space, using information gain to assess how closely questions divide possibilities in half. Answer accuracy will be evaluated by comparing responses against known facts about the hidden word, measuring truthfulness and consistency while identifying misleading or contradictory answers.
+We also plan to identify what characteristics make sentences/questions sound more human. We will use this to come up with a metric that would help us evaluate the humanness of each LLM.
+Generally we will have to develop the following scoring functions:
+Scoring Functions for guess performance
+Scoring function for how well the questions it asked were
+Scoring on how varied the answers are
+Scoring on how truthful the answerer is
+Scoring on ‘humanness’ of questions asked.
+Scoring on computational efficiency
+If time and resources permit, we will also evaluate computational efficiency using metrics such as peak RAM and VRAM usage, response time, and token consumption. This will allow us to examine the tradeoff between game performance and resource requirements, identifying models that achieve comparable results with fewer computational resources.
+
+
+
+
+Next Steps
+Currently, we have a rudimentary 20 questions game set up with 1 model playing both the guesser and the answerer. As our next steps, we should allow for multiple models to be loaded, and for multiple games to be run in sequence to allow for better data collection. After collecting the data for multiple models, and deciding on at least 4 to move on, we need to collect data for each possible combination, and score each model based on the statistics we chose earlier. If we have time later, we can try to run a larger model and see how it will compare to the regular sized models we can run on our own hardware by using Colab, or another available server. Additionally we could try to use an API model to compare how the open-source vs proprietary models can tackle this game.
+
+Our code is located at https://github.com/n-man13/CSE519-Final-Project 
+
+References
+
+KUMAR, CRS. "Large Language Models (LLM) for Automating 20 Questions Game." 
+Zoe Mongan, Luke Sernau, Will Lifferth, Bovard Doerschuk-Tiberi, Ryan Holbrook, Will Cukierski,    Addison    Howard.    (2024).    LLM    20    Questions.    Kaggle. https://kaggle.com/competitions/llm-20-questions( Last accessed on 11/8/2026)
+Zhang, Yizhe, Jiarui Lu, and Navdeep Jaitly. "Probing the multi-turn planning capabilities of LLMs via 20 question games." Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2024. 
+	
+20 questions (TV series 1949– ) - imdb. (n.d.). https://www.imdb.com/title/tt0320997/
+CLiPS. (n.d.). 20Q. Huggingface. Retrieved November 12, 2026, from https://huggingface.co/datasets/clips/20Q
+Deepseek-ai/DeepSeek-R1-0528 · hugging face. (2025, May 29). Huggingface.Co. https://huggingface.co/deepseek-ai/DeepSeek-R1-0528
+Moonshotai/Kimi-K2.6 · hugging face. (2026, July 27). Huggingface. https://huggingface.co/moonshotai/Kimi-K2.6
+
+
