@@ -1,13 +1,21 @@
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl}
 \usepackage{parskip}
+\setlength{\parskip}{3pt}
+\setlist{nosep}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{3pt}{1pt}
 
 \title{\textbf{20 Questions with LLMs}\\[0.5em]
 \large CSE-519 Project Proposal}
@@ -121,65 +129,54 @@ For many of the models we looked at, we were searching for four main things:
 
 \subsection*{Candidate Models}
 
-\textbf{DeepSeek R1 0528:} DeepSeek is a powerful model when it comes to strong
-reasoning and inference tasks. It performs well for several benchmarks
-compared to models. Most notably the GPQA Diamond benchmark, which means it is
-good with facts on major sciences (Physics, Biology and Chemistry). We believe
-that this might give it an edge when it comes to 20 Questions, specially for
-games that involve scientific facts to deduce the answer.
-
-\textbf{Kimi K2:} Although originally meant for coding tasks, KIMI K2 is good
-at conversations and step by step logical reasoning. We thought it would be
-interesting to see how it's thinking style does for 20 questions, even though
-it is op
-
-\textbf{Xwinlm:} Xwin-LM is based on Llama 2 and is optimized for emulating
-human-like conversations. I performed well on several benchmarks, even
-exceeding GPT4 in the AlpacaEval benchmark, which evaluated models for
-instruction following. We think that its ability to better emulate human
-conversations will make it better at coming up with questions.
-
-\textbf{Command-r:} Command-R is an LLM optimized for conversations with long
-contexts. It was developed by Cohere Labs, to have grounded generation
-capabilities. Essentially meaning that it is optimized for generating
-responses based on supplied texts or documents. For this model we believe
-that it might be a good guesser as it does well for long contexts and by
-extension could perform well, even with several small questions.
-
-\textbf{Cipher:} Cypher is a model that is optimized for human-like
-conversations where the context/topic remains the same. It is good at
-giving direct/precise answers and uses low memory. Its outputs are well
-structured. In 20 Questions, since the topic remains the same, Cypher might perform well as
-it would be less likely to stray away from the topic when asking questions to
-narrow the game down.
-
-\textbf{Spark-X2.5-4B:} General purpose language model specialized for writing,
-reasoning and conversations. A particular advantage of this model is that it
-has a lower overhead compared to models which have a larger context. We think
-that its specialization in reasoning will help it perform well in a game of 20
-Questions.
-
-\textbf{Thoxhuman-chat-8b:} Thox is a digital human conversation model that
-can adapt its persona based on what is specified. It is good at emulating
-natural dialogue and does a decent job when it comes to answering with
-verified facts. It is based on the Quen3 model. Since Thox is good with facts
-it might be able to guess quicker, before reaching question 20. Its natural
-dialogue emulation may also help it with posing questions when it plays as a
-questioner/player.
-
-\textbf{apollo-astralis-4b:} Apollo-Astralis is built for deep logical
-thinking and is customized for Human-AI collaboration. It has strong
-conversational reasoning and communicates in a way that emulates human
-empathy. It can work with RAM as low as 4 GB and occupy just about 2.5GB of
-disk space. We think its specialization in logical thinking might make it good
-for 20 Questions. Also it would be interesting to see if lightweight models can
-achieve this.
-
-\textbf{billy:} Billy stands for ``Better Interaction Language Learning Yield''
-and it is customized for conversation tasks and sounding less bot like, and
-more like a real human in a casual conversation. It only occupies 4.1 GB of
-space and is relatively lightweight. We think that its customization for
-conversational tasks will make it better at posing questions more naturally.
+\begin{table}[htbp]
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}p{0.19\textwidth}X X@{}}
+\toprule
+\textbf{Model} & \textbf{Characteristics} & \textbf{Expected relevance} \\
+\midrule
+\textbf{DeepSeek R1 0528} &
+Strong reasoning and inference; performs well on several benchmarks,
+including GPQA Diamond and major sciences. &
+May excel at games requiring scientific facts and deduction. \\
+\textbf{Kimi K2} &
+Originally intended for coding; also supports conversation and step-by-step
+logical reasoning. &
+Its thinking style may be interesting to evaluate in 20 Questions. \\
+\textbf{Xwin-LM} &
+Based on Llama 2 and optimized for human-like conversation; exceeded GPT-4
+in the AlpacaEval instruction-following benchmark. &
+May generate more natural questions. \\
+\textbf{Command-R} &
+Optimized for long-context conversation and grounded generation from supplied
+texts or documents. &
+May be a strong guesser when interpreting many small questions. \\
+\textbf{Cipher} &
+Designed for consistent, human-like conversations; gives direct, precise,
+well-structured answers and uses low memory. &
+May stay focused on the topic and narrow the game effectively. \\
+\textbf{Spark-X2.5-4B} &
+General-purpose model specialized in writing, reasoning, and conversation;
+has lower overhead than models with larger contexts. &
+Its reasoning specialization may help it perform well in 20 Questions. \\
+\textbf{Thoxhuman-chat-8b} &
+Digital-human conversation model with adaptable personas, natural dialogue,
+and verified factual responses; based on Qwen3. &
+May guess quickly and pose natural questions. \\
+\textbf{Apollo-Astralis-4B} &
+Built for deep logical thinking and human--AI collaboration; conversational,
+empathetic, and runs with as little as 4 GB RAM and 2.5 GB disk space. &
+May perform well through logical thinking while testing lightweight models. \\
+\textbf{Billy} &
+``Better Interaction Language Learning Yield'' model customized for casual,
+human-like conversation; relatively lightweight at 4.1 GB. &
+May pose questions more naturally. \\
+\bottomrule
+\end{tabularx}
+\caption{Candidate LLMs and the properties motivating their inclusion.}
+\end{table}
 
 We may also use historical question sets available for 20 Questions games and
 see how well each model performs with those legacy questions. This would give
