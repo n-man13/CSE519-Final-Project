@@ -16,7 +16,9 @@ class FakeModel:
         return "QUESTION: Is it an animal?"
 
 
-def test_cli_runs_requested_number_of_games_with_random_words(monkeypatch, tmp_path):
+def test_cli_runs_requested_number_of_games_with_random_words(
+    monkeypatch, tmp_path, capsys
+):
     monkeypatch.setattr(cli, "OllamaModel", lambda model, name: FakeModel())
     output = tmp_path / "games.json"
 
@@ -31,6 +33,7 @@ def test_cli_runs_requested_number_of_games_with_random_words(monkeypatch, tmp_p
     assert payload["games_played"] == 3
     assert len(payload["games"]) == 3
     assert 0.0 <= payload["aggregate_metrics"]["win_rate"] <= 1.0
+    assert capsys.readouterr().out.count("Completed game") == 3
 
 
 def test_cli_prompts_when_game_count_is_missing(monkeypatch, tmp_path):

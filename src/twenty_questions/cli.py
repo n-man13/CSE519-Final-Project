@@ -67,9 +67,15 @@ def main() -> None:
 
     model = OllamaModel(model=args.model, name=args.model)
     results = []
-    for _ in range(games):
+    for game_number in range(1, games + 1):
         secret_word = args.secret_word or random.choice(STARTER_WORDS)["word"]
-        results.append(TwentyQuestionsGame().play(secret_word, model, model))
+        result = TwentyQuestionsGame().play(secret_word, model, model)
+        results.append(result)
+        outcome = "won" if result.won else "lost"
+        print(
+            f"Completed game {game_number}/{games}: {outcome} "
+            f"({result.questions_used} questions)"
+        )
     batch = BatchResult(
         games_requested=games,
         games=tuple(results),
