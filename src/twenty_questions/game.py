@@ -5,7 +5,6 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field, replace
 import math
 import re
-import string
 import time
 from typing import Any
 
@@ -56,10 +55,13 @@ class BatchResult:
 
 
 class TwentyQuestionsGame:
-    def __init__(self, max_questions: int = 20) -> None:
+    def __init__(self, max_questions: int = 20, answer_retries: int = 2) -> None:
         if max_questions < 1:
             raise ValueError("max_questions must be positive.")
+        if answer_retries < 0:
+            raise ValueError("answer_retries must not be negative.")
         self.max_questions = max_questions
+        self.answer_retries = answer_retries
 
     def play(
         self,
@@ -100,13 +102,25 @@ class TwentyQuestionsGame:
                 break
 
             answer_prompt = self._answer_prompt(secret_word, question)
-            answer_started = time.perf_counter()
-            raw_answer = answerer.complete(answer_prompt).strip()
-            answer_latency = time.perf_counter() - answer_started
-            answer = self._parse_answer(raw_answer)
+            answer_latency = 0.0
+            answer = None
+            raw_answer = ""
+            for attempt in range(self.answer_retries + 1):
+                prompt = (
+                    answer_prompt
+                    if attempt == 0
+                    else self._answer_retry_prompt(question)
+                )
+                answer_started = time.perf_counter()
+                raw_answer = answerer.complete(prompt).strip()
+                answer_latency += time.perf_counter() - answer_started
+                answer = self._parse_answer(raw_answer)
+                if answer is not None:
+                    break
             if answer is None:
                 raise ValueError(
-                    f"Answerer response must be yes or no, got: {raw_answer!r}"
+                    "Answerer response must end with yes or no after "
+                    f"{self.answer_retries + 1} attempts, got: {raw_answer!r}"
                 )
             turns.append(
                 Turn(
@@ -281,10 +295,19 @@ class TwentyQuestionsGame:
         )
 
     @staticmethod
+    def _answer_retry_prompt(question: str) -> str:
+        return (
+            "Your previous response was not usable. Answer the following question "
+            "with exactly one word: yes or no. Do not include reasoning, tags, "
+            f"quotes, or any explanation.\nQuestion: {question}"
+        )
+
+    @staticmethod
     def _parse_answer(response: str) -> str | None:
         normalized = TwentyQuestionsGame._remove_reasoning(response)
-        normalized = normalized.casefold().strip().strip(string.punctuation)
-        return normalized if normalized in {"yes", "no"} else None
+        normalized = normalized.casefold().strip()
+        match = re.search(r"\b(yes|no)\b[\s.!?]*$", normalized)
+        return match.group(1) if match else None
 
     @staticmethod
     def _parse_questioner_response(

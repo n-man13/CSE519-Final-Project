@@ -59,6 +59,10 @@ across the batch:
 Unavailable hardware measurements, such as VRAM when the host does not expose
 it, are recorded as `null` rather than estimated.
 
+The game strips common `<think>...</think>` reasoning blocks before parsing
+model answers. If an answer is still not clearly `yes` or `no`, it automatically
+re-prompts the answerer with a strict one-word format before failing explicitly.
+
 ## Project layout
 
 ```text

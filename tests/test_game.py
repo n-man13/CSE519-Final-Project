@@ -66,6 +66,7 @@ def test_game_normalizes_answer_punctuation():
     assert result.turns[0].answer == "no"
 
 
+
 def test_game_ignores_model_reasoning_before_answer():
     questioner = FakeModel(["QUESTION: Is it round?"])
     answerer = FakeModel(
@@ -74,6 +75,22 @@ def test_game_ignores_model_reasoning_before_answer():
 
     result = TwentyQuestionsGame(max_questions=1).play(
         "piano", questioner, answerer
+    )
+
+    assert result.turns[0].answer == "no"
+
+
+def test_game_accepts_explanation_ending_with_binary_answer():
+    questioner = FakeModel(["QUESTION: Is it used for cutting?"])
+    answerer = FakeModel(
+        [
+            "<think>Long reasoning...</think>\n"
+            "A bicycle is used for transportation, not cutting. The answer is no."
+        ]
+    )
+
+    result = TwentyQuestionsGame(max_questions=1).play(
+        "bicycle", questioner, answerer
     )
 
     assert result.turns[0].answer == "no"
@@ -93,7 +110,20 @@ def test_game_rejects_non_binary_answer():
     answerer = FakeModel(["maybe"])
 
     with pytest.raises(ValueError, match="yes or no"):
-        TwentyQuestionsGame(max_questions=1).play("piano", questioner, answerer)
+        TwentyQuestionsGame(max_questions=1, answer_retries=0).play(
+            "piano", questioner, answerer
+        )
+
+
+def test_game_retries_invalid_answer_with_strict_prompt():
+    questioner = FakeModel(["QUESTION: Is it round?"])
+    answerer = FakeModel(["<think>unfinished", "no"])
+
+    result = TwentyQuestionsGame(max_questions=1).play(
+        "piano", questioner, answerer
+    )
+
+    assert result.turns[0].answer == "no"
 
 
 def test_game_stops_at_question_limit():
