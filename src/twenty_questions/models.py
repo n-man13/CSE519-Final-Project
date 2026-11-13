@@ -3,9 +3,71 @@
 from __future__ import annotations
 
 import json
+import shutil
+import sys
+import subprocess
 from dataclasses import dataclass
 from typing import Protocol
 from urllib import request
+
+
+def process_memory_bytes() -> int | None:
+    """Return this process's resident memory when the host exposes it."""
+    if sys.platform == "win32":
+        import ctypes
+
+        class ProcessMemoryCounters(ctypes.Structure):
+            _fields_ = [
+                ("cb", ctypes.c_ulong),
+                ("page_fault_count", ctypes.c_ulong),
+                ("peak_working_set_size", ctypes.c_size_t),
+                ("working_set_size", ctypes.c_size_t),
+            ]
+
+        counters = ProcessMemoryCounters()
+        counters.cb = ctypes.sizeof(counters)
+        if ctypes.windll.psapi.GetProcessMemoryInfo(
+            ctypes.windll.kernel32.GetCurrentProcess(),
+            ctypes.byref(counters),
+            counters.cb,
+        ):
+            return int(counters.working_set_size)
+        return None
+    try:
+        import resource
+
+        usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        return int(usage * (1024 if sys.platform == "darwin" else 1))
+    except (ImportError, AttributeError):
+        return None
+
+
+def gpu_memory_bytes() -> int | None:
+    """Return total memory used by visible GPUs when nvidia-smi is available."""
+    executable = shutil.which("nvidia-smi")
+    if executable is None:
+        return None
+    try:
+        completed = subprocess.run(
+            [
+                executable,
+                "--query-gpu=memory.used",
+                "--format=csv,noheader,nounits",
+            ],
+            capture_output=True,
+            check=True,
+            text=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    values = []
+    for line in completed.stdout.splitlines():
+        try:
+            values.append(int(line.strip()) * 1024 * 1024)
+        except ValueError:
+            continue
+    return sum(values) if values else None
 
 
 class ModelAdapter(Protocol):

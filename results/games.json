@@ -1,0 +1,2033 @@
+{
+  "games_requested": 10,
+  "games_played": 10,
+  "games": [
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is your chosen subject a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your chosen subject a living thing?",
+          "response_latency_seconds": 5.910825248000037,
+          "answer_latency_seconds": 0.21048070099982397
+        },
+        {
+          "question_number": 2,
+          "question": "Is the subject something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject something that can be held in your hand?",
+          "response_latency_seconds": 0.3507452100000137,
+          "answer_latency_seconds": 0.17033202799984792
+        },
+        {
+          "question_number": 3,
+          "question": "Is the subject man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject man-made?",
+          "response_latency_seconds": 0.2532601729999442,
+          "answer_latency_seconds": 0.16468087599992032
+        },
+        {
+          "question_number": 4,
+          "question": "Is the subject used for entertainment?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject used for entertainment?",
+          "response_latency_seconds": 0.2701599689999057,
+          "answer_latency_seconds": 0.16137775999982296
+        },
+        {
+          "question_number": 5,
+          "question": "Is the subject electronic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the subject electronic?",
+          "response_latency_seconds": 0.2240542889999233,
+          "answer_latency_seconds": 0.1556065720001243
+        },
+        {
+          "question_number": 6,
+          "question": "Is the subject primarily used for a specific purpose, rather than being intended for general enjoyment?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject primarily used for a specific purpose, rather than being intended for general enjoyment?",
+          "response_latency_seconds": 0.4191572279999036,
+          "answer_latency_seconds": 0.172103363999895
+        },
+        {
+          "question_number": 7,
+          "question": "Is the subject commonly found in most households?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject commonly found in most households?",
+          "response_latency_seconds": 0.3124722509999174,
+          "answer_latency_seconds": 0.17192120400000022
+        },
+        {
+          "question_number": 8,
+          "question": "Is the subject related to reading?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject related to reading?",
+          "response_latency_seconds": 0.2810967840000558,
+          "answer_latency_seconds": 0.16241282900000442
+        },
+        {
+          "question_number": 9,
+          "question": "Does the subject have moving parts?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the subject have moving parts?",
+          "response_latency_seconds": 0.2901405439999962,
+          "answer_latency_seconds": 0.18137627900000552
+        },
+        {
+          "question_number": 10,
+          "question": "Can the subject be powered on and off?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Can the subject be powered on and off?",
+          "response_latency_seconds": 0.314784402999976,
+          "answer_latency_seconds": 0.17122436199997537
+        },
+        {
+          "question_number": 11,
+          "question": "Is the subject typically used by only one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject typically used by only one person at a time?",
+          "response_latency_seconds": 0.36512763500013534,
+          "answer_latency_seconds": 0.16740300199990088
+        },
+        {
+          "question_number": 12,
+          "question": "Does the subject require batteries to function?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the subject require batteries to function?",
+          "response_latency_seconds": 0.31031408200010446,
+          "answer_latency_seconds": 0.1789307890001055
+        },
+        {
+          "question_number": 13,
+          "question": "Can the subject be used by multiple people simultaneously?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Can the subject be used by multiple people simultaneously?",
+          "response_latency_seconds": 0.3545514910001657,
+          "answer_latency_seconds": 0.16943258900005276
+        },
+        {
+          "question_number": 14,
+          "question": "Is the subject designed for a recreational activity?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the subject designed for a recreational activity?",
+          "response_latency_seconds": 0.34896749400013505,
+          "answer_latency_seconds": 0.16067899500012572
+        },
+        {
+          "question_number": 15,
+          "question": "Is the subject commonly used outdoors?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the subject commonly used outdoors?",
+          "response_latency_seconds": 0.2986218070000177,
+          "answer_latency_seconds": 0.1772078540000166
+        },
+        {
+          "question_number": 16,
+          "question": "Is the subject used primarily with games?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the subject used primarily with games?",
+          "response_latency_seconds": 0.30297964400006094,
+          "answer_latency_seconds": 0.1689097959999799
+        },
+        {
+          "question_number": 17,
+          "question": "Q: Does the subject have buttons or controls?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Q: Does the subject have buttons or controls?",
+          "response_latency_seconds": 0.33302936699988095,
+          "answer_latency_seconds": 0.17153679399984867
+        },
+        {
+          "question_number": 18,
+          "question": "Q: Does the subject have a clear objective score?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Q: Does the subject have a clear objective score?",
+          "response_latency_seconds": 0.3537349540001742,
+          "answer_latency_seconds": 0.1765064359999542
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: Deck of Cards",
+          "answer": "no",
+          "guess": "Deck of Cards",
+          "raw_response": "GUESS: Deck of Cards",
+          "response_latency_seconds": 0.30653615699998227,
+          "answer_latency_seconds": 0.1683779779998531
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: Puzzle",
+          "answer": "yes",
+          "guess": "Puzzle",
+          "raw_response": "GUESS: Puzzle",
+          "response_latency_seconds": 0.28155163999986144,
+          "answer_latency_seconds": 0.15978733199995077
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 13,
+        "answer_no_count": 7,
+        "question_humanness_score": 0.8550000000000001,
+        "question_quality_score": 0.9709505944546686,
+        "answer_truthfulness_score": 0.0,
+        "total_latency_seconds": 15.3023979099994,
+        "ram_bytes_delta": 2432,
+        "vram_bytes_delta": 2837446656
+      }
+    },
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Are you a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Are you a living thing?",
+          "response_latency_seconds": 0.25034154400009356,
+          "answer_latency_seconds": 0.1735489980001148
+        },
+        {
+          "question_number": 2,
+          "question": "Are you something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Are you something that can be held in your hand?",
+          "response_latency_seconds": 0.32017114099994615,
+          "answer_latency_seconds": 0.15922191100003147
+        },
+        {
+          "question_number": 3,
+          "question": "Is the object man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the object man-made?",
+          "response_latency_seconds": 0.2514137050000045,
+          "answer_latency_seconds": 0.172010802999921
+        },
+        {
+          "question_number": 4,
+          "question": "Is the object electronic?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the object electronic?",
+          "response_latency_seconds": 0.24897851500008983,
+          "answer_latency_seconds": 0.1853487270000187
+        },
+        {
+          "question_number": 5,
+          "question": "Are you used for entertainment?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Are you used for entertainment?",
+          "response_latency_seconds": 0.2586830820000614,
+          "answer_latency_seconds": 0.16146680900010324
+        },
+        {
+          "question_number": 6,
+          "question": "Is the object commonly found in most households?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the object commonly found in most households?",
+          "response_latency_seconds": 0.3039144809999925,
+          "answer_latency_seconds": 0.1671529930001725
+        },
+        {
+          "question_number": 7,
+          "question": "Does the object require batteries to function?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the object require batteries to function?",
+          "response_latency_seconds": 0.30283973299992795,
+          "answer_latency_seconds": 0.17773575100000016
+        },
+        {
+          "question_number": 8,
+          "question": "Are you a portable device?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Are you a portable device?",
+          "response_latency_seconds": 0.2719431859998167,
+          "answer_latency_seconds": 0.18433021700002428
+        },
+        {
+          "question_number": 9,
+          "question": "Is the object a television?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the object a television?",
+          "response_latency_seconds": 0.240542774000005,
+          "answer_latency_seconds": 0.15784478199998375
+        },
+        {
+          "question_number": 10,
+          "question": "Can you be connected to a power source via a cable?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Can you be connected to a power source via a cable?",
+          "response_latency_seconds": 0.3584784459999355,
+          "answer_latency_seconds": 0.16413504100000864
+        },
+        {
+          "question_number": 11,
+          "question": "Does the object have a screen?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the object have a screen?",
+          "response_latency_seconds": 0.265860506999843,
+          "answer_latency_seconds": 0.16913516299996445
+        },
+        {
+          "question_number": 12,
+          "question": "Is the object used primarily for visual entertainment?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the object used primarily for visual entertainment?",
+          "response_latency_seconds": 0.32302933400001166,
+          "answer_latency_seconds": 0.1686117890001242
+        },
+        {
+          "question_number": 13,
+          "question": "Is the object typically plugged into a wall outlet?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the object typically plugged into a wall outlet?",
+          "response_latency_seconds": 0.3126704900000732,
+          "answer_latency_seconds": 0.17614438400005383
+        },
+        {
+          "question_number": 14,
+          "question": "Does the object have buttons or controls of some kind?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the object have buttons or controls of some kind?",
+          "response_latency_seconds": 0.3741049620000467,
+          "answer_latency_seconds": 0.18500095600006716
+        },
+        {
+          "question_number": 15,
+          "question": "Is the object typically used for gaming?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the object typically used for gaming?",
+          "response_latency_seconds": 0.30372778199989625,
+          "answer_latency_seconds": 0.16611822899994877
+        },
+        {
+          "question_number": 16,
+          "question": "Does the object have a distinct or notable sound?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the object have a distinct or notable sound?",
+          "response_latency_seconds": 0.3578958779999084,
+          "answer_latency_seconds": 0.17224688700002844
+        },
+        {
+          "question_number": 17,
+          "question": "Does the object have a specific purpose or function that it was designed to serve?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the object have a specific purpose or function that it was designed to serve?",
+          "response_latency_seconds": 0.44406764799987286,
+          "answer_latency_seconds": 0.17604017299981933
+        },
+        {
+          "question_number": 18,
+          "question": "Is the object commonly used for music playback?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the object commonly used for music playback?",
+          "response_latency_seconds": 0.338307198999928,
+          "answer_latency_seconds": 0.160744263999959
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: Radio",
+          "answer": "no",
+          "guess": "Radio",
+          "raw_response": "GUESS: Radio",
+          "response_latency_seconds": 0.26870987900019827,
+          "answer_latency_seconds": 0.16975855099985893
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: DVD player",
+          "answer": "no",
+          "guess": "DVD player",
+          "raw_response": "GUESS: DVD player",
+          "response_latency_seconds": 0.29183100600016587,
+          "answer_latency_seconds": 0.15727126899992072
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 12,
+        "answer_no_count": 8,
+        "question_humanness_score": 0.89,
+        "question_quality_score": 0.9709505944546686,
+        "answer_truthfulness_score": 0.6923076923076923,
+        "total_latency_seconds": 9.49137898899994,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 1048576
+      }
+    },
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Are you thinking of a living thing?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Are you thinking of a living thing?",
+          "response_latency_seconds": 0.270211234000044,
+          "answer_latency_seconds": 0.15630772500003332
+        },
+        {
+          "question_number": 2,
+          "question": "Is the living thing a mammal?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the living thing a mammal?",
+          "response_latency_seconds": 0.2742552340000657,
+          "answer_latency_seconds": 0.16962534200001755
+        },
+        {
+          "question_number": 3,
+          "question": "Does the mammal typically live on land?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal typically live on land?",
+          "response_latency_seconds": 0.28772103200003585,
+          "answer_latency_seconds": 0.16931882300013967
+        },
+        {
+          "question_number": 4,
+          "question": "Does the mammal have four legs?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal have four legs?",
+          "response_latency_seconds": 0.27783282300015344,
+          "answer_latency_seconds": 0.17798441000013554
+        },
+        {
+          "question_number": 5,
+          "question": "Does the mammal primarily eat plants?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal primarily eat plants?",
+          "response_latency_seconds": 0.28519231700011005,
+          "answer_latency_seconds": 0.1587788949998412
+        },
+        {
+          "question_number": 6,
+          "question": "Does the mammal have a tail?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal have a tail?",
+          "response_latency_seconds": 0.28569661599999563,
+          "answer_latency_seconds": 0.1654077860000598
+        },
+        {
+          "question_number": 7,
+          "question": "Does the mammal typically carry its young?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal typically carry its young?",
+          "response_latency_seconds": 0.3139271850000114,
+          "answer_latency_seconds": 0.15831017900018196
+        },
+        {
+          "question_number": 8,
+          "question": "Does the mammal primarily rely on others for food?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal primarily rely on others for food?",
+          "response_latency_seconds": 0.33667052300006617,
+          "answer_latency_seconds": 0.16176772900007563
+        },
+        {
+          "question_number": 9,
+          "question": "Does the mammal have claws?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal have claws?",
+          "response_latency_seconds": 0.28589637699997184,
+          "answer_latency_seconds": 0.17074406999995517
+        },
+        {
+          "question_number": 10,
+          "question": "Does the mammal have a distinctive sound it makes?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal have a distinctive sound it makes?",
+          "response_latency_seconds": 0.3434721759999775,
+          "answer_latency_seconds": 0.1580673089999891
+        },
+        {
+          "question_number": 11,
+          "question": "Q: Does the mammal primarily live in groups?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Q: Does the mammal primarily live in groups?",
+          "response_latency_seconds": 0.3293769590000011,
+          "answer_latency_seconds": 0.1840884420000748
+        },
+        {
+          "question_number": 12,
+          "question": "Does the mammal use its sense of smell to find food or navigate?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal use its sense of smell to find food or navigate?",
+          "response_latency_seconds": 0.404567052999937,
+          "answer_latency_seconds": 0.16359099000010247
+        },
+        {
+          "question_number": 13,
+          "question": "Does the mammal make a sound that is typically loud enough for humans to hear?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the mammal make a sound that is typically loud enough for humans to hear?",
+          "response_latency_seconds": 0.41681802900006915,
+          "answer_latency_seconds": 0.17085439700008465
+        },
+        {
+          "question_number": 14,
+          "question": "Does the mammal primarily use its senses (such as sight and hearing) to interact with its environment?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the mammal primarily use its senses (such as sight and hearing) to interact with its environment?",
+          "response_latency_seconds": 0.49096685299991805,
+          "answer_latency_seconds": 0.1665299410001353
+        },
+        {
+          "question_number": 15,
+          "question": "Does the mammal have a distinctive sound that is used for communication?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does the mammal have a distinctive sound that is used for communication?",
+          "response_latency_seconds": 0.38985638000008294,
+          "answer_latency_seconds": 0.1686295079998672
+        },
+        {
+          "question_number": 16,
+          "question": "Does the mammal primarily use vocalizations for social interaction, such as warning calls or contact calls?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the mammal primarily use vocalizations for social interaction, such as warning calls or contact calls?",
+          "response_latency_seconds": 0.4729293969999162,
+          "answer_latency_seconds": 0.19003838999992695
+        },
+        {
+          "question_number": 17,
+          "question": "Does the mammal primarily rely on its sense of hearing to navigate?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the mammal primarily rely on its sense of hearing to navigate?",
+          "response_latency_seconds": 0.39570878499989703,
+          "answer_latency_seconds": 0.18144385999994483
+        },
+        {
+          "question_number": 18,
+          "question": "Does the mammal use a specific type of sound for communication that is unique to it?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the mammal use a specific type of sound for communication that is unique to it?",
+          "response_latency_seconds": 0.4893587750000279,
+          "answer_latency_seconds": 0.16981633199998214
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: wolf",
+          "answer": "no",
+          "guess": "wolf",
+          "raw_response": "GUESS: wolf",
+          "response_latency_seconds": 0.3133933399999478,
+          "answer_latency_seconds": 0.16430250600001273
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: bear",
+          "answer": "no",
+          "guess": "bear",
+          "raw_response": "GUESS: bear",
+          "response_latency_seconds": 0.3259531740000057,
+          "answer_latency_seconds": 0.17369978600004288
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.934068055375491,
+        "answer_yes_count": 7,
+        "answer_no_count": 13,
+        "question_humanness_score": 0.8975,
+        "question_quality_score": null,
+        "answer_truthfulness_score": null,
+        "total_latency_seconds": 10.369110682000837,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 1048576
+      }
+    },
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Are you a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Are you a living thing?",
+          "response_latency_seconds": 0.24974191100000098,
+          "answer_latency_seconds": 0.1597437909999826
+        },
+        {
+          "question_number": 2,
+          "question": "Is what you are man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is what you are man-made?",
+          "response_latency_seconds": 0.26449491200014563,
+          "answer_latency_seconds": 0.17357344100014416
+        },
+        {
+          "question_number": 3,
+          "question": "Are you something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Are you something that can be held in your hand?",
+          "response_latency_seconds": 0.31586248099984005,
+          "answer_latency_seconds": 0.16212417399992773
+        },
+        {
+          "question_number": 4,
+          "question": "Are you used for a specific purpose rather than decoration?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Are you used for a specific purpose rather than decoration?",
+          "response_latency_seconds": 0.3193553950000023,
+          "answer_latency_seconds": 0.158289158000116
+        },
+        {
+          "question_number": 5,
+          "question": "Is what you are electronic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is what you are electronic?",
+          "response_latency_seconds": 0.27502696799979276,
+          "answer_latency_seconds": 0.17714606899994578
+        },
+        {
+          "question_number": 6,
+          "question": "Is what you are made primarily of plastic?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is what you are made primarily of plastic?",
+          "response_latency_seconds": 0.3057859380000991,
+          "answer_latency_seconds": 0.17686426899990693
+        },
+        {
+          "question_number": 7,
+          "question": "Are you commonly found in most households?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Are you commonly found in most households?",
+          "response_latency_seconds": 0.3182566790001147,
+          "answer_latency_seconds": 0.19296211699997912
+        },
+        {
+          "question_number": 8,
+          "question": "Is what you are used for a task that involves manual labor?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is what you are used for a task that involves manual labor?",
+          "response_latency_seconds": 0.3514799779998157,
+          "answer_latency_seconds": 0.18715951599983782
+        },
+        {
+          "question_number": 9,
+          "question": "Is what you are made primarily of plastic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is what you are made primarily of plastic?",
+          "response_latency_seconds": 0.3047229730000254,
+          "answer_latency_seconds": 0.1681716159998814
+        },
+        {
+          "question_number": 10,
+          "question": "Is what you are used by only one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is what you are used by only one person at a time?",
+          "response_latency_seconds": 0.3722159419999116,
+          "answer_latency_seconds": 0.18505739900001572
+        },
+        {
+          "question_number": 11,
+          "question": "Is what you are made for a functional item rather than a luxury good?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is what you are made for a functional item rather than a luxury good?",
+          "response_latency_seconds": 0.3790508360000331,
+          "answer_latency_seconds": 0.15836554899988187
+        },
+        {
+          "question_number": 12,
+          "question": "Are you disposable?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Are you disposable?",
+          "response_latency_seconds": 0.2705446140000731,
+          "answer_latency_seconds": 0.16901630400002432
+        },
+        {
+          "question_number": 13,
+          "question": "Is what you are used in an office setting?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is what you are used in an office setting?",
+          "response_latency_seconds": 0.36944048999998813,
+          "answer_latency_seconds": 0.17690967399994406
+        },
+        {
+          "question_number": 14,
+          "question": "Is what you are used for something that can be found in most industries?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is what you are used for something that can be found in most industries?",
+          "response_latency_seconds": 0.39580929099997775,
+          "answer_latency_seconds": 0.1746572010001728
+        },
+        {
+          "question_number": 15,
+          "question": "Is what you are used primarily with the hands?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is what you are used primarily with the hands?",
+          "response_latency_seconds": 0.32910677899985785,
+          "answer_latency_seconds": 0.21910591699997894
+        },
+        {
+          "question_number": 16,
+          "question": "Is what you are used for a task related to food or drink?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is what you are used for a task related to food or drink?",
+          "response_latency_seconds": 0.42212994999999864,
+          "answer_latency_seconds": 0.21013679799989404
+        },
+        {
+          "question_number": 17,
+          "question": "Is what you are commonly used in an industrial or manufacturing setting?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is what you are commonly used in an industrial or manufacturing setting?",
+          "response_latency_seconds": 0.4668310439999459,
+          "answer_latency_seconds": 0.2741443669999626
+        },
+        {
+          "question_number": 18,
+          "question": "Is what you are made primarily of plastic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is what you are made primarily of plastic?",
+          "response_latency_seconds": 0.38384059100008017,
+          "answer_latency_seconds": 0.20290638199981004
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: stapler",
+          "answer": "no",
+          "guess": "stapler",
+          "raw_response": "GUESS: stapler",
+          "response_latency_seconds": 0.3413428449998719,
+          "answer_latency_seconds": 0.18780244499998844
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: tape",
+          "answer": "no",
+          "guess": "tape",
+          "raw_response": "GUESS: tape",
+          "response_latency_seconds": 0.31472874800010686,
+          "answer_latency_seconds": 0.16715943600001992
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 8,
+        "answer_no_count": 12,
+        "question_humanness_score": 0.8875,
+        "question_quality_score": null,
+        "answer_truthfulness_score": null,
+        "total_latency_seconds": 10.431063987999096,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 35651584
+      }
+    },
+    {
+      "secret_word": "bicycle",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is your subject a living thing?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject a living thing?",
+          "response_latency_seconds": 0.276059923000048,
+          "answer_latency_seconds": 0.20127399900002274
+        },
+        {
+          "question_number": 2,
+          "question": "Is your subject a mammal?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject a mammal?",
+          "response_latency_seconds": 0.288039346000005,
+          "answer_latency_seconds": 0.20722503599995434
+        },
+        {
+          "question_number": 3,
+          "question": "Is your subject typically found indoors?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject typically found indoors?",
+          "response_latency_seconds": 0.305481195999846,
+          "answer_latency_seconds": 0.2113577019999866
+        },
+        {
+          "question_number": 4,
+          "question": "Is your subject something that can be held in one's hand?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject something that can be held in one's hand?",
+          "response_latency_seconds": 0.388869805000013,
+          "answer_latency_seconds": 0.1769794950000687
+        },
+        {
+          "question_number": 5,
+          "question": "Does your subject have four legs?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject have four legs?",
+          "response_latency_seconds": 0.27924601399990934,
+          "answer_latency_seconds": 0.17457772100010516
+        },
+        {
+          "question_number": 6,
+          "question": "Can your subject fly?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Can your subject fly?",
+          "response_latency_seconds": 0.25461842899994735,
+          "answer_latency_seconds": 0.1586890650000896
+        },
+        {
+          "question_number": 7,
+          "question": "Is your subject a type of animal that is commonly kept as a pet?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject a type of animal that is commonly kept as a pet?",
+          "response_latency_seconds": 0.4015070670000114,
+          "answer_latency_seconds": 0.1660834580000028
+        },
+        {
+          "question_number": 8,
+          "question": "Does your subject primarily live on land?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject primarily live on land?",
+          "response_latency_seconds": 0.30968434800001887,
+          "answer_latency_seconds": 0.17657706199997847
+        },
+        {
+          "question_number": 9,
+          "question": "Can your subject be found in or near water?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Can your subject be found in or near water?",
+          "response_latency_seconds": 0.3346895740000946,
+          "answer_latency_seconds": 0.17644190199985132
+        },
+        {
+          "question_number": 10,
+          "question": "Is your subject typically aquatic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject typically aquatic?",
+          "response_latency_seconds": 0.2934394000001248,
+          "answer_latency_seconds": 0.17405454200002168
+        },
+        {
+          "question_number": 11,
+          "question": "Is your subject a type of insect?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is your subject a type of insect?",
+          "response_latency_seconds": 0.30799414900002375,
+          "answer_latency_seconds": 0.183391310999923
+        },
+        {
+          "question_number": 12,
+          "question": "Does your subject have any distinctive features or markings?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject have any distinctive features or markings?",
+          "response_latency_seconds": 0.34871886800010543,
+          "answer_latency_seconds": 0.17608386300003076
+        },
+        {
+          "question_number": 13,
+          "question": "Does your subject typically live in saltwater environments?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does your subject typically live in saltwater environments?",
+          "response_latency_seconds": 0.33495812099999966,
+          "answer_latency_seconds": 0.19617319099984343
+        },
+        {
+          "question_number": 14,
+          "question": "Does your subject have a backbone?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does your subject have a backbone?",
+          "response_latency_seconds": 0.30505950199994913,
+          "answer_latency_seconds": 0.17782292699985192
+        },
+        {
+          "question_number": 15,
+          "question": "Does your subject primarily feed on marine plants?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject primarily feed on marine plants?",
+          "response_latency_seconds": 0.3477707540000665,
+          "answer_latency_seconds": 0.16602578800006995
+        },
+        {
+          "question_number": 16,
+          "question": "Does your subject have any distinctive features or markings that serve a functional purpose, rather than just being for aesthetic purposes?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does your subject have any distinctive features or markings that serve a functional purpose, rather than just being for aesthetic purposes?",
+          "response_latency_seconds": 0.5242453000000751,
+          "answer_latency_seconds": 0.17995592600004784
+        },
+        {
+          "question_number": 17,
+          "question": "Q: Is your subject primarily carnivorous?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Q: Is your subject primarily carnivorous?",
+          "response_latency_seconds": 0.3332810879999215,
+          "answer_latency_seconds": 0.17931703799990828
+        },
+        {
+          "question_number": 18,
+          "question": "Does your subject have any venom?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does your subject have any venom?",
+          "response_latency_seconds": 0.3004782430000432,
+          "answer_latency_seconds": 0.17918265000002975
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: starfish",
+          "answer": "no",
+          "guess": "starfish",
+          "raw_response": "GUESS: starfish",
+          "response_latency_seconds": 0.3136956429998463,
+          "answer_latency_seconds": 0.17384849499990196
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: octopus",
+          "answer": "no",
+          "guess": "octopus",
+          "raw_response": "GUESS: octopus",
+          "response_latency_seconds": 0.309652036999978,
+          "answer_latency_seconds": 0.18816036199996233
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.7219280948873623,
+        "answer_yes_count": 7,
+        "answer_no_count": 13,
+        "question_humanness_score": 0.8724999999999999,
+        "question_quality_score": 0.7219280948873623,
+        "answer_truthfulness_score": 1.0,
+        "total_latency_seconds": 10.180710339999678,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": -10485760
+      }
+    },
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is the thing you're thinking of a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a living thing?",
+          "response_latency_seconds": 0.33604674299999715,
+          "answer_latency_seconds": 0.2274136290000115
+        },
+        {
+          "question_number": 2,
+          "question": "Is the thing you're thinking of something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be held in your hand?",
+          "response_latency_seconds": 0.44714230299996416,
+          "answer_latency_seconds": 0.1913845440001296
+        },
+        {
+          "question_number": 3,
+          "question": "Is the thing you're thinking of man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of man-made?",
+          "response_latency_seconds": 0.30879140699994423,
+          "answer_latency_seconds": 0.17574138800000583
+        },
+        {
+          "question_number": 4,
+          "question": "Is the thing you're thinking of man-made for a purpose other than holding or carrying something?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of man-made for a purpose other than holding or carrying something?",
+          "response_latency_seconds": 0.44691194600000017,
+          "answer_latency_seconds": 0.16750835599987113
+        },
+        {
+          "question_number": 5,
+          "question": "Is the thing you're thinking of an object that can be found in most households?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of an object that can be found in most households?",
+          "response_latency_seconds": 0.42963555799997266,
+          "answer_latency_seconds": 0.18503976300007707
+        },
+        {
+          "question_number": 6,
+          "question": "Is the thing you're thinking of used for a specific task or function?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for a specific task or function?",
+          "response_latency_seconds": 0.3884740429998601,
+          "answer_latency_seconds": 0.19437875899984647
+        },
+        {
+          "question_number": 7,
+          "question": "Is the thing you're thinking of something that can be found in most households for cleaning purposes?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be found in most households for cleaning purposes?",
+          "response_latency_seconds": 0.4676070030000119,
+          "answer_latency_seconds": 0.19565691399998286
+        },
+        {
+          "question_number": 8,
+          "question": "Is the thing you're thinking of electronic?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of electronic?",
+          "response_latency_seconds": 0.33602466399997866,
+          "answer_latency_seconds": 0.175085794999859
+        },
+        {
+          "question_number": 9,
+          "question": "Is the thing you're thinking of something that can be plugged into a wall outlet?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be plugged into a wall outlet?",
+          "response_latency_seconds": 0.4425290029998905,
+          "answer_latency_seconds": 0.16493265600001905
+        },
+        {
+          "question_number": 10,
+          "question": "Is the thing you're thinking of used for entertainment?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for entertainment?",
+          "response_latency_seconds": 0.3403398420000485,
+          "answer_latency_seconds": 0.18150166300006276
+        },
+        {
+          "question_number": 11,
+          "question": "Does the thing you're thinking of require batteries to function?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of require batteries to function?",
+          "response_latency_seconds": 0.3795754779998788,
+          "answer_latency_seconds": 0.16547672399997282
+        },
+        {
+          "question_number": 12,
+          "question": "Is the thing you're thinking of something that can be used by only one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be used by only one person at a time?",
+          "response_latency_seconds": 0.4813752719999229,
+          "answer_latency_seconds": 0.1799867009999616
+        },
+        {
+          "question_number": 13,
+          "question": "Is the thing you're thinking of commonly found in households with children?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of commonly found in households with children?",
+          "response_latency_seconds": 0.39807557300014196,
+          "answer_latency_seconds": 0.17948772699992332
+        },
+        {
+          "question_number": 14,
+          "question": "Is the thing you're thinking of used primarily for entertainment purposes that involve visual content?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used primarily for entertainment purposes that involve visual content?",
+          "response_latency_seconds": 0.4440046160000293,
+          "answer_latency_seconds": 0.1826941250001255
+        },
+        {
+          "question_number": 15,
+          "question": "Q: Does the thing you're thinking of have a screen?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Q: Does the thing you're thinking of have a screen?",
+          "response_latency_seconds": 0.4002892209998663,
+          "answer_latency_seconds": 0.16865477300007115
+        },
+        {
+          "question_number": 16,
+          "question": "Is the thing you're thinking of used primarily for playing games?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used primarily for playing games?",
+          "response_latency_seconds": 0.40847273600002154,
+          "answer_latency_seconds": 0.18550825699981033
+        },
+        {
+          "question_number": 17,
+          "question": "Is the thing you're thinking of something that can be played on a television?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be played on a television?",
+          "response_latency_seconds": 0.45345030299995415,
+          "answer_latency_seconds": 0.181947996999952
+        },
+        {
+          "question_number": 18,
+          "question": "Does the thing you're thinking of have a touchscreen interface?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Does the thing you're thinking of have a touchscreen interface?",
+          "response_latency_seconds": 0.40809866200015676,
+          "answer_latency_seconds": 0.15550027199992655
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: TV",
+          "answer": "no",
+          "guess": "TV",
+          "raw_response": "GUESS: TV",
+          "response_latency_seconds": 0.3120807390000664,
+          "answer_latency_seconds": 0.15920904500012512
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: Tablet",
+          "answer": "no",
+          "guess": "Tablet",
+          "raw_response": "GUESS: Tablet",
+          "response_latency_seconds": 0.3208947639998314,
+          "answer_latency_seconds": 0.17185888299991348
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 11,
+        "answer_no_count": 9,
+        "question_humanness_score": 0.8975,
+        "question_quality_score": 0.9709505944546686,
+        "answer_truthfulness_score": 1.0,
+        "total_latency_seconds": 11.538787846999185,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 30408704
+      }
+    },
+    {
+      "secret_word": "bicycle",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is your subject a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject a living thing?",
+          "response_latency_seconds": 0.26789830400002757,
+          "answer_latency_seconds": 0.16040462999990268
+        },
+        {
+          "question_number": 2,
+          "question": "Is your subject something that can be held in one's hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject something that can be held in one's hand?",
+          "response_latency_seconds": 0.35395730499999445,
+          "answer_latency_seconds": 0.1835208429999966
+        },
+        {
+          "question_number": 3,
+          "question": "Is your subject man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject man-made?",
+          "response_latency_seconds": 0.258073702000047,
+          "answer_latency_seconds": 0.1646067070000754
+        },
+        {
+          "question_number": 4,
+          "question": "Is your subject used for a specific function or purpose?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject used for a specific function or purpose?",
+          "response_latency_seconds": 0.3257228369998302,
+          "answer_latency_seconds": 0.17375491600000714
+        },
+        {
+          "question_number": 5,
+          "question": "Is the object electronic?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the object electronic?",
+          "response_latency_seconds": 0.2608158900000035,
+          "answer_latency_seconds": 0.18213822899997467
+        },
+        {
+          "question_number": 6,
+          "question": "Is your subject something that requires batteries?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject something that requires batteries?",
+          "response_latency_seconds": 0.2964916060000178,
+          "answer_latency_seconds": 0.16462220199991862
+        },
+        {
+          "question_number": 7,
+          "question": "Is your subject used for entertainment?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is your subject used for entertainment?",
+          "response_latency_seconds": 0.26278989499996896,
+          "answer_latency_seconds": 0.180666009000106
+        },
+        {
+          "question_number": 8,
+          "question": "Does your subject have a screen?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject have a screen?",
+          "response_latency_seconds": 0.3019877849999375,
+          "answer_latency_seconds": 0.18033766000007745
+        },
+        {
+          "question_number": 9,
+          "question": "Is your subject used primarily indoors?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject used primarily indoors?",
+          "response_latency_seconds": 0.29754203599986795,
+          "answer_latency_seconds": 0.17468384299991158
+        },
+        {
+          "question_number": 10,
+          "question": "Is your subject commonly found in most households?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject commonly found in most households?",
+          "response_latency_seconds": 0.3601986900000611,
+          "answer_latency_seconds": 0.16363929800013466
+        },
+        {
+          "question_number": 11,
+          "question": "Does your subject have buttons or controls of some kind?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does your subject have buttons or controls of some kind?",
+          "response_latency_seconds": 0.352333187999875,
+          "answer_latency_seconds": 0.1745928970001387
+        },
+        {
+          "question_number": 12,
+          "question": "Is your subject used for a purpose related to personal grooming?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is your subject used for a purpose related to personal grooming?",
+          "response_latency_seconds": 0.3729070770000362,
+          "answer_latency_seconds": 0.18040352100001655
+        },
+        {
+          "question_number": 13,
+          "question": "Is your subject typically plugged into a power source?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is your subject typically plugged into a power source?",
+          "response_latency_seconds": 0.32468458799985456,
+          "answer_latency_seconds": 0.16857156799983386
+        },
+        {
+          "question_number": 14,
+          "question": "Is the object's primary function related to communication?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the object's primary function related to communication?",
+          "response_latency_seconds": 0.3278962289998617,
+          "answer_latency_seconds": 0.16234947599991756
+        },
+        {
+          "question_number": 15,
+          "question": "Is your subject used by only one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is your subject used by only one person at a time?",
+          "response_latency_seconds": 0.35845829499999127,
+          "answer_latency_seconds": 0.17598178699995515
+        },
+        {
+          "question_number": 16,
+          "question": "Does your subject have multiple uses?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does your subject have multiple uses?",
+          "response_latency_seconds": 0.30148731999997835,
+          "answer_latency_seconds": 0.17945916899998338
+        },
+        {
+          "question_number": 17,
+          "question": "Is your subject commonly found in a workplace?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is your subject commonly found in a workplace?",
+          "response_latency_seconds": 0.33233932200005256,
+          "answer_latency_seconds": 0.16564756800016767
+        },
+        {
+          "question_number": 18,
+          "question": "Is the object's primary function related to music?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the object's primary function related to music?",
+          "response_latency_seconds": 0.3517102350001551,
+          "answer_latency_seconds": 0.17089501700002074
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: stapler",
+          "answer": "no",
+          "guess": "stapler",
+          "raw_response": "GUESS: stapler",
+          "response_latency_seconds": 0.3012094600001092,
+          "answer_latency_seconds": 0.1796325129998877
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: calculator",
+          "answer": "no",
+          "guess": "calculator",
+          "raw_response": "GUESS: calculator",
+          "response_latency_seconds": 0.29499324699986573,
+          "answer_latency_seconds": 0.1636753159998534
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 8,
+        "answer_no_count": 12,
+        "question_humanness_score": 0.89,
+        "question_quality_score": 0.908694969562842,
+        "answer_truthfulness_score": 0.25,
+        "total_latency_seconds": 9.753080179999415,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 3145728
+      }
+    },
+    {
+      "secret_word": "piano",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": true,
+      "questions_used": 19,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is the thing you're thinking of a living thing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a living thing?",
+          "response_latency_seconds": 0.3226202359999206,
+          "answer_latency_seconds": 0.17388926700004959
+        },
+        {
+          "question_number": 2,
+          "question": "Is the thing you're thinking of something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be held in your hand?",
+          "response_latency_seconds": 0.40055368000003,
+          "answer_latency_seconds": 0.1801407730001756
+        },
+        {
+          "question_number": 3,
+          "question": "Is the thing you're thinking of man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of man-made?",
+          "response_latency_seconds": 0.3404954060001728,
+          "answer_latency_seconds": 0.17634677199998805
+        },
+        {
+          "question_number": 4,
+          "question": "Is the thing you're thinking of used for a specific purpose?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for a specific purpose?",
+          "response_latency_seconds": 0.3372406669998327,
+          "answer_latency_seconds": 0.18096126699992965
+        },
+        {
+          "question_number": 5,
+          "question": "Is the thing you're thinking of something that can be found indoors?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be found indoors?",
+          "response_latency_seconds": 0.3890814710000541,
+          "answer_latency_seconds": 0.18567841899994164
+        },
+        {
+          "question_number": 6,
+          "question": "Is the thing you're thinking of man-made and used for a recreational purpose?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of man-made and used for a recreational purpose?",
+          "response_latency_seconds": 0.39875608700003795,
+          "answer_latency_seconds": 0.18236362900006498
+        },
+        {
+          "question_number": 7,
+          "question": "Is the thing you're thinking of something that can be found in a household?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be found in a household?",
+          "response_latency_seconds": 0.39827999599992836,
+          "answer_latency_seconds": 0.16816257599998607
+        },
+        {
+          "question_number": 8,
+          "question": "Is the thing you're thinking of man-made and used for entertainment?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of man-made and used for entertainment?",
+          "response_latency_seconds": 0.40964184299991757,
+          "answer_latency_seconds": 0.1705417650000527
+        },
+        {
+          "question_number": 9,
+          "question": "Is the thing you're thinking of something that can be played with?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be played with?",
+          "response_latency_seconds": 0.3918622979999782,
+          "answer_latency_seconds": 0.17917086500006008
+        },
+        {
+          "question_number": 10,
+          "question": "Is the thing you're thinking of electronic?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of electronic?",
+          "response_latency_seconds": 0.34179324399997313,
+          "answer_latency_seconds": 0.17932338200012055
+        },
+        {
+          "question_number": 11,
+          "question": "Is the thing you're thinking of a game?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a game?",
+          "response_latency_seconds": 0.35940189899997677,
+          "answer_latency_seconds": 0.18890800799999852
+        },
+        {
+          "question_number": 12,
+          "question": "Is the thing you're thinking of commonly found in most households?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of commonly found in most households?",
+          "response_latency_seconds": 0.38798705600015637,
+          "answer_latency_seconds": 0.18319240300002093
+        },
+        {
+          "question_number": 13,
+          "question": "Does the thing you're thinking of require batteries to function?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of require batteries to function?",
+          "response_latency_seconds": 0.39837268399992354,
+          "answer_latency_seconds": 0.17260796599998685
+        },
+        {
+          "question_number": 14,
+          "question": "Is the thing you're thinking of a board game?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of a board game?",
+          "response_latency_seconds": 0.3710068749999209,
+          "answer_latency_seconds": 0.18490045099997587
+        },
+        {
+          "question_number": 15,
+          "question": "Is the thing you're thinking of something that can be played by only one person?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be played by only one person?",
+          "response_latency_seconds": 0.44956894000006287,
+          "answer_latency_seconds": 0.17958085800000845
+        },
+        {
+          "question_number": 16,
+          "question": "Is the thing you're thinking of used for a hobby?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for a hobby?",
+          "response_latency_seconds": 0.3868806069999664,
+          "answer_latency_seconds": 0.16090216300017346
+        },
+        {
+          "question_number": 17,
+          "question": "Can the thing you're thinking of be powered using batteries?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Can the thing you're thinking of be powered using batteries?",
+          "response_latency_seconds": 0.4174170359999607,
+          "answer_latency_seconds": 0.17112787399992158
+        },
+        {
+          "question_number": 18,
+          "question": "Is the thing you're thinking of specifically designed for use by one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of specifically designed for use by one person at a time?",
+          "response_latency_seconds": 0.5030383980001716,
+          "answer_latency_seconds": 0.18084343900000022
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: PIANO",
+          "answer": "correct guess",
+          "guess": "PIANO",
+          "raw_response": "GUESS: PIANO",
+          "response_latency_seconds": 0.3479249309998522,
+          "answer_latency_seconds": null
+        }
+      ],
+      "metrics": {
+        "guess_score": 1.0,
+        "questions_used": 19,
+        "answer_variation_entropy": 0.6500224216483541,
+        "answer_yes_count": 15,
+        "answer_no_count": 3,
+        "question_humanness_score": 0.9552631578947368,
+        "question_quality_score": null,
+        "answer_truthfulness_score": null,
+        "total_latency_seconds": 10.550565231000292,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": -3145728
+      }
+    },
+    {
+      "secret_word": "doctor",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is the thing you're thinking of a living thing?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a living thing?",
+          "response_latency_seconds": 0.3398612119999598,
+          "answer_latency_seconds": 0.18964804200004437
+        },
+        {
+          "question_number": 2,
+          "question": "Is the thing you're thinking of typically found indoors?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of typically found indoors?",
+          "response_latency_seconds": 0.34633591600004365,
+          "answer_latency_seconds": 0.1685223639999549
+        },
+        {
+          "question_number": 3,
+          "question": "Is the thing you're thinking of something that can be held in your hand?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be held in your hand?",
+          "response_latency_seconds": 0.3988918620000277,
+          "answer_latency_seconds": 0.1693468200001007
+        },
+        {
+          "question_number": 4,
+          "question": "Is the thing you're thinking of commonly found in a kitchen?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of commonly found in a kitchen?",
+          "response_latency_seconds": 0.33558428899982573,
+          "answer_latency_seconds": 0.165418574999876
+        },
+        {
+          "question_number": 5,
+          "question": "Is the thing you're thinking of man-made?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of man-made?",
+          "response_latency_seconds": 0.3044617619998462,
+          "answer_latency_seconds": 0.17573561999984122
+        },
+        {
+          "question_number": 6,
+          "question": "Is the thing you're thinking of something that serves a functional purpose?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that serves a functional purpose?",
+          "response_latency_seconds": 0.35894148400007,
+          "answer_latency_seconds": 0.18912752899996121
+        },
+        {
+          "question_number": 7,
+          "question": "Is the thing you're thinking of electronic?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of electronic?",
+          "response_latency_seconds": 0.2930991900000208,
+          "answer_latency_seconds": 0.18159480600002098
+        },
+        {
+          "question_number": 8,
+          "question": "Is the thing you're thinking of used for personal grooming?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for personal grooming?",
+          "response_latency_seconds": 0.34687281500009703,
+          "answer_latency_seconds": 0.1638638730000821
+        },
+        {
+          "question_number": 9,
+          "question": "Is the thing you're thinking of something that can be found on a desk?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be found on a desk?",
+          "response_latency_seconds": 0.43582827699992777,
+          "answer_latency_seconds": 0.17995847499992124
+        },
+        {
+          "question_number": 10,
+          "question": "Is the thing you're thinking of man-made and used for a purpose related to organization or storage?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of man-made and used for a purpose related to organization or storage?",
+          "response_latency_seconds": 0.473266699000078,
+          "answer_latency_seconds": 0.17811004800000774
+        },
+        {
+          "question_number": 11,
+          "question": "Is the thing you're thinking of something that can be used by only one person at a time?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be used by only one person at a time?",
+          "response_latency_seconds": 0.5096793760001219,
+          "answer_latency_seconds": 0.16313294399992628
+        },
+        {
+          "question_number": 12,
+          "question": "Is the thing you're thinking of made primarily of paper?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of made primarily of paper?",
+          "response_latency_seconds": 0.36140019899994513,
+          "answer_latency_seconds": 0.16511693899997226
+        },
+        {
+          "question_number": 13,
+          "question": "Is the thing you're thinking of something that can be written on with a pencil?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of something that can be written on with a pencil?",
+          "response_latency_seconds": 0.438098281000066,
+          "answer_latency_seconds": 0.17718318100014585
+        },
+        {
+          "question_number": 14,
+          "question": "Is the thing you're thinking of used for writing?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for writing?",
+          "response_latency_seconds": 0.3654048440000679,
+          "answer_latency_seconds": 0.16458992899993063
+        },
+        {
+          "question_number": 15,
+          "question": "Is the thing you're thinking of commonly used by children?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of commonly used by children?",
+          "response_latency_seconds": 0.3812065839999832,
+          "answer_latency_seconds": 0.16781286400009776
+        },
+        {
+          "question_number": 16,
+          "question": "Is the thing you're thinking of something that can be used with both hands?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of something that can be used with both hands?",
+          "response_latency_seconds": 0.47488220800005365,
+          "answer_latency_seconds": 0.19571165999991536
+        },
+        {
+          "question_number": 17,
+          "question": "Is the thing you're thinking of a container or box?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a container or box?",
+          "response_latency_seconds": 0.4217001569998047,
+          "answer_latency_seconds": 0.17717003699999623
+        },
+        {
+          "question_number": 18,
+          "question": "Is the thing you're thinking of used for drawing?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "Is the thing you're thinking of used for drawing?",
+          "response_latency_seconds": 0.40175145600005635,
+          "answer_latency_seconds": 0.1800209470000027
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: notebook",
+          "answer": "no",
+          "guess": "notebook",
+          "raw_response": "GUESS: notebook",
+          "response_latency_seconds": 0.319161652000048,
+          "answer_latency_seconds": 0.1834663960000853
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: stapler",
+          "answer": "no",
+          "guess": "stapler",
+          "raw_response": "GUESS: stapler",
+          "response_latency_seconds": 0.3333511090002048,
+          "answer_latency_seconds": 0.17104438199999095
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.9709505944546686,
+        "answer_yes_count": 12,
+        "answer_no_count": 8,
+        "question_humanness_score": 0.915,
+        "question_quality_score": null,
+        "answer_truthfulness_score": null,
+        "total_latency_seconds": 11.146354803000122,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": 1048576
+      }
+    },
+    {
+      "secret_word": "doctor",
+      "questioner_model": "llama3.2",
+      "answerer_model": "llama3.2",
+      "won": false,
+      "questions_used": 20,
+      "turns": [
+        {
+          "question_number": 1,
+          "question": "Is the thing you're thinking of a living thing?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a living thing?",
+          "response_latency_seconds": 0.3384658390000368,
+          "answer_latency_seconds": 0.1761010930001703
+        },
+        {
+          "question_number": 2,
+          "question": "Is the thing you're thinking of a mammal?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a mammal?",
+          "response_latency_seconds": 0.33661836199985373,
+          "answer_latency_seconds": 0.16840802499996244
+        },
+        {
+          "question_number": 3,
+          "question": "Does the thing you're thinking of typically live on land?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of typically live on land?",
+          "response_latency_seconds": 0.35429144500017173,
+          "answer_latency_seconds": 0.16908401099999537
+        },
+        {
+          "question_number": 4,
+          "question": "Does the thing you're thinking of typically have four legs?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of typically have four legs?",
+          "response_latency_seconds": 0.3500433710000834,
+          "answer_latency_seconds": 0.17078058200013402
+        },
+        {
+          "question_number": 5,
+          "question": "Does the thing you're thinking of primarily live in a domestic setting?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of primarily live in a domestic setting?",
+          "response_latency_seconds": 0.37941395300003933,
+          "answer_latency_seconds": 0.17181131500001356
+        },
+        {
+          "question_number": 6,
+          "question": "Does the thing you're thinking of typically require human care and assistance to survive?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of typically require human care and assistance to survive?",
+          "response_latency_seconds": 0.4170284019999144,
+          "answer_latency_seconds": 0.18116312899996956
+        },
+        {
+          "question_number": 7,
+          "question": "Does the thing you're thinking of spend most of its time indoors?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does the thing you're thinking of spend most of its time indoors?",
+          "response_latency_seconds": 0.368291827999883,
+          "answer_latency_seconds": 0.1709071899999799
+        },
+        {
+          "question_number": 8,
+          "question": "Does the thing you're thinking of have a tail?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does the thing you're thinking of have a tail?",
+          "response_latency_seconds": 0.33641931700003624,
+          "answer_latency_seconds": 0.17593166599999677
+        },
+        {
+          "question_number": 9,
+          "question": "Does the thing you're thinking of weigh less than 10 pounds?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of weigh less than 10 pounds?",
+          "response_latency_seconds": 0.4033901549998973,
+          "answer_latency_seconds": 0.19359932299994398
+        },
+        {
+          "question_number": 10,
+          "question": "Does the thing you're thinking of require regular grooming or maintenance to stay healthy?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of require regular grooming or maintenance to stay healthy?",
+          "response_latency_seconds": 0.4345986449998236,
+          "answer_latency_seconds": 0.17970466300016597
+        },
+        {
+          "question_number": 11,
+          "question": "Does the thing you're thinking of have claws?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of have claws?",
+          "response_latency_seconds": 0.3663293119998343,
+          "answer_latency_seconds": 0.17944376699983877
+        },
+        {
+          "question_number": 12,
+          "question": "Does the thing you're thinking of typically live with a human family as a pet?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of typically live with a human family as a pet?",
+          "response_latency_seconds": 0.47306361500000094,
+          "answer_latency_seconds": 0.17337442799998826
+        },
+        {
+          "question_number": 13,
+          "question": "Is the thing you're thinking of commonly kept as a companion animal by people who live in apartments?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of commonly kept as a companion animal by people who live in apartments?",
+          "response_latency_seconds": 0.5255120700001044,
+          "answer_latency_seconds": 0.18571564900003068
+        },
+        {
+          "question_number": 14,
+          "question": "Does the thing you're thinking of have a typical lifespan of less than 15 years?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of have a typical lifespan of less than 15 years?",
+          "response_latency_seconds": 0.4991229019999537,
+          "answer_latency_seconds": 0.16950200299993412
+        },
+        {
+          "question_number": 15,
+          "question": "Does the thing you're thinking of rely on humans for food?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "Does the thing you're thinking of rely on humans for food?",
+          "response_latency_seconds": 0.40111045000003287,
+          "answer_latency_seconds": 0.1808245109998552
+        },
+        {
+          "question_number": 16,
+          "question": "Is the thing you're thinking of a carnivore?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Is the thing you're thinking of a carnivore?",
+          "response_latency_seconds": 0.41309260500020173,
+          "answer_latency_seconds": 0.17556347499998992
+        },
+        {
+          "question_number": 17,
+          "question": "Does the thing you're thinking of have whiskers?",
+          "answer": "no",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of have whiskers?",
+          "response_latency_seconds": 0.4054008190000786,
+          "answer_latency_seconds": 0.1826769689998855
+        },
+        {
+          "question_number": 18,
+          "question": "Does the thing you're thinking of typically require human interaction to prevent separation anxiety?",
+          "answer": "yes",
+          "guess": null,
+          "raw_response": "QUESTION: Does the thing you're thinking of typically require human interaction to prevent separation anxiety?",
+          "response_latency_seconds": 0.49391668700013724,
+          "answer_latency_seconds": 0.18232151799998064
+        },
+        {
+          "question_number": 19,
+          "question": "GUESS: cat",
+          "answer": "no",
+          "guess": "cat",
+          "raw_response": "GUESS: cat",
+          "response_latency_seconds": 0.3288070539999808,
+          "answer_latency_seconds": 0.1813902839999173
+        },
+        {
+          "question_number": 20,
+          "question": "GUESS: dog",
+          "answer": "no",
+          "guess": "dog",
+          "raw_response": "GUESS: dog",
+          "response_latency_seconds": 0.32514999800014266,
+          "answer_latency_seconds": 0.16921768299994255
+        }
+      ],
+      "metrics": {
+        "guess_score": 0.0,
+        "questions_used": 20,
+        "answer_variation_entropy": 0.7219280948873623,
+        "answer_yes_count": 15,
+        "answer_no_count": 5,
+        "question_humanness_score": 0.915,
+        "question_quality_score": 0.7219280948873623,
+        "answer_truthfulness_score": 0.0,
+        "total_latency_seconds": 11.487588112999902,
+        "ram_bytes_delta": 0,
+        "vram_bytes_delta": -1048576
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "win_rate": 0.1,
+    "games_won": 1,
+    "average_questions_used": 19.9,
+    "average_guess_score": 0.1,
+    "questions_used": 199,
+    "average_answer_variation_entropy": 0.8853650233526581,
+    "answer_yes_count": 108,
+    "answer_no_count": 90,
+    "average_question_humanness_score": 0.8975263157894737,
+    "average_question_quality_score": 0.8775671571169288,
+    "average_answer_truthfulness_score": 0.4903846153846154,
+    "average_total_latency_seconds": 11.025103808299786,
+    "average_ram_bytes_delta": 243.2,
+    "average_vram_bytes_delta": 289511833.6
+  }
+}

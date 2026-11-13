@@ -84,3 +84,24 @@ def test_game_stops_at_question_limit():
 
     assert result.won is False
     assert result.questions_used == 1
+
+
+def test_game_records_research_metrics():
+    questioner = FakeModel(
+        [
+            "QUESTION: Is it an animal?",
+            "QUESTION: Is it an animal?",
+            "GUESS: piano",
+            "GUESS: piano",
+        ]
+    )
+    answerer = FakeModel(["yes", "yes", "no", "no"])
+
+    result = TwentyQuestionsGame(max_questions=4).play(
+        "penguin", questioner, answerer
+    )
+
+    assert result.metrics["answer_variation_entropy"] > 0.0
+    assert result.metrics["question_quality_score"] > 0.0
+    assert result.metrics["answer_truthfulness_score"] == 1.0
+    assert result.metrics["total_latency_seconds"] >= 0.0

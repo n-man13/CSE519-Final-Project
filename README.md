@@ -24,7 +24,7 @@ python3 -m venv .venv
 .venv/bin/python -m pytest
 ```
 
-## Run one game
+## Run games
 
 Start Ollama and download a model:
 
@@ -32,15 +32,32 @@ Start Ollama and download a model:
 ollama pull llama3.2
 ```
 
-Run the game:
+Run a requested number of games. If `--games` is omitted, the command prompts
+for the count in the terminal:
 
 ```bash
 .venv/bin/python -m twenty_questions.cli \
   --model llama3.2 \
-  --secret-word penguin
+  --games 10
 ```
 
-The structured transcript is saved to `results/game.json` by default.
+Each game randomly selects a word from the starter vocabulary. To use one
+deterministic word for every game, add `--secret-word penguin`. All transcripts
+and aggregate metrics are saved to `results/games.json` by default; use
+`--output` to choose another path.
+
+The JSON includes these auditable metrics for each game and averages/counts
+across the batch:
+
+- guess performance: win indicator and questions used
+- question quality: information gain for recognized vocabulary categories
+- answer variation: normalized entropy of yes/no answers
+- answerer truthfulness: correctness against curated vocabulary facts
+- question humanness: deterministic clarity, format, length, and repetition heuristics
+- computational efficiency: per-turn/total latency and available process RAM delta
+
+Unavailable hardware measurements, such as VRAM when the host does not expose
+it, are recorded as `null` rather than estimated.
 
 ## Project layout
 
