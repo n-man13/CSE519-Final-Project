@@ -66,6 +66,28 @@ def test_game_normalizes_answer_punctuation():
     assert result.turns[0].answer == "no"
 
 
+def test_game_ignores_model_reasoning_before_answer():
+    questioner = FakeModel(["QUESTION: Is it round?"])
+    answerer = FakeModel(
+        ['<think>The secret word is an object.</think>\n\nno']
+    )
+
+    result = TwentyQuestionsGame(max_questions=1).play(
+        "piano", questioner, answerer
+    )
+
+    assert result.turns[0].answer == "no"
+
+
+def test_game_ignores_model_reasoning_before_question():
+    question, guess = TwentyQuestionsGame._parse_questioner_response(
+        "<think>I should ask about its category.</think>\nQUESTION: Is it an object?"
+    )
+
+    assert question == "Is it an object?"
+    assert guess is None
+
+
 def test_game_rejects_non_binary_answer():
     questioner = FakeModel(["QUESTION: Is it round?"])
     answerer = FakeModel(["maybe"])

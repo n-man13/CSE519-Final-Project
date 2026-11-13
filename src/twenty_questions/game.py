@@ -257,7 +257,8 @@ class TwentyQuestionsGame:
                 "You are the questioner in 20 Questions. This is a final guess "
                 f"(turn {number}/{max_questions}). Based on the previous turns, "
                 "return only the single answer you think is the secret word. Do "
-                "not ask a question and do not include an explanation. Use the "
+                "not ask a question and do not include an explanation or "
+                "reasoning tags. Use the "
                 "format 'GUESS: <answer>'.\nPrevious turns:\n" + prior_turns
             )
         return (
@@ -265,27 +266,31 @@ class TwentyQuestionsGame:
             f"question (question {number}/{max_questions}). Previous turns:\n"
             f"{prior_turns}\n"
             "Return either 'QUESTION: <yes/no question>' or "
-            "'GUESS: <single answer>'."
+            "'GUESS: <single answer>'. Do not include an explanation or "
+            "reasoning tags."
         )
 
     @staticmethod
     def _answer_prompt(secret_word: str, question: str) -> str:
         return (
             f"The secret word is {secret_word!r}. Answer this question with only "
-            f"'yes' or 'no': {question}\n"
+            f"'yes' or 'no': {question}\nDo not include an explanation, "
+            "markdown, or reasoning tags.\n"
             "If the question asks whether the secret word is a specific answer, "
             "reply 'yes' only when that answer exactly matches the secret word."
         )
 
     @staticmethod
     def _parse_answer(response: str) -> str | None:
-        normalized = response.casefold().strip().strip(string.punctuation)
+        normalized = TwentyQuestionsGame._remove_reasoning(response)
+        normalized = normalized.casefold().strip().strip(string.punctuation)
         return normalized if normalized in {"yes", "no"} else None
 
     @staticmethod
     def _parse_questioner_response(
         response: str, guess_only: bool = False
     ) -> tuple[str, str | None]:
+        response = TwentyQuestionsGame._remove_reasoning(response)
         if not response:
             raise ValueError("Questioner returned an empty response.")
         normalized = response.casefold()
@@ -308,3 +313,11 @@ class TwentyQuestionsGame:
                 raise ValueError("Questioner returned an empty question.")
             return question, None
         return response, None
+
+    @staticmethod
+    def _remove_reasoning(response: str) -> str:
+        """Remove common model reasoning blocks before parsing its final answer."""
+        without_reasoning = re.sub(
+            r"<think>.*?</think>", "", response, flags=re.IGNORECASE | re.DOTALL
+        )
+        return without_reasoning.strip()
